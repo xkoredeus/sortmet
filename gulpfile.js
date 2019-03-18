@@ -35,11 +35,11 @@ gulp.task('scripts', function() {
 		'app/libs/owl.carousel/owl.carousel.min.js'
 		])
 		.pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
-		.pipe(uglify()) // Сжимаем JS файл
+		// .pipe(uglify()) // Сжимаем JS файл
 		.pipe(gulp.dest('app/js')); // Выгружаем в папку app/js
 });
 
-gulp.task('css-libs', ['sass'], function() {
+gulp.task('css-libs', function() {
 	return gulp.src([
 		'app/libs/bootstrap/bootstrap.min.css',
 		'app/libs/fancybox/jquery.fancybox.min.css',
