@@ -65,35 +65,31 @@ button:active
 	box-shadow: 0px 12px 28px -13px rgba(0,0,0,0.64)
 	.shd:hover
 		box-shadow: 0px 16px 32px -9px rgba(0,0,0,0.69)
-@keyframes brr
-	0%
-		color: #000
-	33%
-		background-color: #50B848
-		color: #000
-	66%
-		background-color: #00BFF3
-		color: #000
-	80%
-		background-color: #EE337B
-		color: #000
-	100%
-		background-color: #FFCB05
-		color: #000
 .btn
 	outline: none
-	font-size: 14px
-	font-family: 'Museo700'
+	font-size: 13px
+	font-family: 'Proxima Nova Bl'
 	text-transform: uppercase
+	letter-spacing: 1px
 	text-align: center
 	padding: 15px 30px
-	color: #000
-	background-color: #FFCB05
+	color: #fff
+	background: linear-gradient(to right, rgb(0,64,213) 0%,rgb(0,87,255) 100%)
 	position: relative
 	display: block
 	max-width: 320px
+	border-radius: 0
 	&:hover
-		animation: brr linear 5s infinite
+		color: #fff
+		background: linear-gradient(to right, rgb(0,64,213) 0%,rgb(0,87,255) 100%)
+		opacity: .9
+		transform: scale(.97)
+	&_transp
+		background: transparent
+		border: 1px solid #fff
+		&:hover
+			background: rgb(0,87,255)
+			border-color: rgb(0,87,255)
 .list_circle
 	list-style-type: none
 	padding-left: 0
@@ -187,14 +183,14 @@ button:active
 			.btn
 				width: 100%
 				margin-bottom: 15px
-		&__policy
-			margin-top: 15px
-			max-width: 230px
-			text-align: center
-			font-size: 12px
-			a
-				font-size: 12px 
-				color: #00BFF3
+			&__policy
+				margin-top: 15px
+				max-width: 230px
+				text-align: center
+				font-size: 12px
+				a
+					font-size: 12px 
+					color: #00BFF3
 .owl-carousel
 	.owl-dots
 		position: absolute
@@ -277,4 +273,3 @@ button:active
 		top: 8px
 	&:not(:last-child)
 		margin-bottom: 15px
-@import "media"
