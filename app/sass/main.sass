@@ -68,7 +68,7 @@ button:active
 .btn
 	outline: none
 	font-size: 13px
-	font-family: 'Proxima Nova Bl'
+	font-family: 'Museo500'
 	text-transform: uppercase
 	letter-spacing: 1px
 	text-align: center
@@ -140,11 +140,7 @@ button:active
 			bottom: -5%
 			left: -5%
 			z-index: 1
-			background: rgb(255,203,5)
-			background: -moz-linear-gradient(-45deg, rgba(255,203,5,1) 0%, rgba(80,184,72,1) 32%, rgba(0,191,243,1) 70%, rgba(238,51,123,1) 100%)
-			background: -webkit-linear-gradient(-45deg, rgba(255,203,5,1) 0%,rgba(80,184,72,1) 32%,rgba(0,191,243,1) 70%,rgba(238,51,123,1) 100%)
-			background: linear-gradient(135deg, rgba(255,203,5,1) 0%,rgba(80,184,72,1) 32%,rgba(0,191,243,1) 70%,rgba(238,51,123,1) 100%)
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffcb05', endColorstr='#ee337b',GradientType=1 )
+			background: #fff
 			opacity: .7
 	.popup_call__wrp
 		max-width: 320px
@@ -199,53 +195,56 @@ button:active
 		justify-content: center
 		bottom: 0
 		button.owl-dot
-			width: 15px
-			height: 15px
-			border: 1px solid #333
+			width: 13px
+			height: 13px
+			border: 2.5px solid #fff
+			border-radius: 50%
 			background-color: transparent
 			position: relative
-			transform: scale(1)
+			// transform: scale(1)
 			&:not(:last-child)
-				margin-right: 13px
+				margin-right: 10px
 			&.active
-				transform: scale(0.9)
+				// transform: scale(.8)
 				border-color: transparent
-				background-color: #FFCB05
+				background-color: #fff
 	.owl-nav
 		button.owl-prev,
 		button.owl-next
 			position: absolute
 			bottom: 50%
 			margin-bottom: -25.5px
-			border: 1px solid #000
-			padding: 10px !important
+			border-radius: 50%
+			padding: 7px !important
+			background-color: #fff
+			img
+				width: 17px
+				height: auto
 		button.owl-prev:hover,
 		button.owl-next:hover
-			background-color: #fff
-			border-color: #fff
+			background-color: yellow
+			transform: scale(.9)
 		button.owl-prev.disabled,
 		button.owl-next.disabled,
 		button.owl-prev.disabled:hover,
 		button.owl-next.disabled:hover
-			opacity: .4
-			background-color: transparent
-			border-color: #000
+			opacity: 0
 			cursor: default
 			
 		button.owl-prev
-			left: 0
+			left: -36px
 		button.owl-next
-			right: 0
-.section_inner
-	padding: 60px 0
-.section__ttl
-	font-size: 40px
-	color: #2D2A2B
-	font-family: 'Museo900'
-	letter-spacing: 2px
-	margin-bottom: 45px
-	text-align: center
-	text-transform: uppercase
+			right: -36px
+.section
+	&_inner
+		padding: 60px 0
+	&__ttl
+		font-size: 36px
+		font-family: 'Museo900'
+		letter-spacing: 1px
+		margin-bottom: 35px
+		text-align: center
+		text-transform: uppercase
 .input__wrp
 	position: relative
 	max-width: 230px
