@@ -2,85 +2,484 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<meta name="theme-color" content="#6232ad">
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+	<meta content="#6232ad" name="theme-color">
+	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
 	<title>New Project</title>
-	<link rel="stylesheet" href="css/libs.min.css">
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/media.css">
+	<link href="css/libs.min.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
 </head>
 <body>
-	<div class="tabs">
-		<ul class="tabs__list">
-			<li class="active"><span>Характеристики</span></li>
-			<li><span>Доставка</span></li>
-			<li><span>Оплата</span></li>
-		</ul>
-		<div class="tabs__container">
-			<div class="tabs__content-item active-tab">
-				<div class="tabs-acc__btn">Характеристики</div>
-				<div class="tabs-acc__cnt">
-					<p>Трубы электросварные оцинкованные 89х3.5 оцинкованная ГОСТ 10704, 10705 по лучшей цене вы можете купить на нашем сайте. Металлгарант давно занимается продажей труб и знает в них толк. Мы отгружаем продукцию оптом и в розницу и работаем с любыми объемами – метра или километр – нам не важно. Вся продукция находится в наличии на нашем складе в СПб. Трубы электросварные оцинкованные 89х3.5 оцинкованная производится в соответствии с ГОСТ 10704-91 или ГОСТ 10705-91. Без применения этой трубы еще не построили ни один дом, в котором есть водопровод и отопительные коммуникации.</p>
-					<div class="b mb-3">Основные области применения:</div>
-					<ul class="list_string">
-						<li>Создание отопительных систем и трубопроводов;</li>
-						<li>Сельском хозяйстве; Изготовление металлоконструкций и строительство;</li>
-						<li>ЖКХ;</li>
-						<li>Производство деталей трубопроводов.</li>
-					</ul>
-					<p>Мы отгружаем продукцию оптом и в розницу и работаем с любыми объемами – метра или километр – нам не важно. Вся продукция находится в наличии на нашем складе в СПб. Трубы электросварные оцинкованные 89х3.5 оцинкованная производится в соответствии с ГОСТ 10704-91 или ГОСТ 10705-91. Без применения этой трубы еще не построили ни один дом, в котором есть водопровод и отопительные коммуникации.</p>
-					<p>Мы отгружаем продукцию оптом и в розницу и работаем с любыми объемами – метра или километр – нам не важно. Вся продукция находится в наличии на нашем складе в СПб. Трубы электросварные оцинкованные 89х3.5 оцинкованная производится в соответствии с ГОСТ 10704-91 или ГОСТ 10705-91. Без применения этой трубы еще не построили ни один дом, в котором есть водопровод и отопительные коммуникации.</p>
+	<header class="header">
+		<div class="header__top">
+			<div class="container">
+				<div class="d-flex align-items-center justify-content-between">
+					<div class="d-flex align-items-center">
+						<a class="header__top-link" href="#">О компании</a>
+						<a class="header__top-link" href="#">Клиентам</a>
+						<a class="header__top-link" href="#">Доставка и оплата</a>
+					</div>
+					<div class="d-flex align-items-center">
+						<a class="header__top-link" href="#">Прайс лист</a>
+						<a class="header__top-link" href="#">Контакты</a>
+					</div>
 				</div>
 			</div>
-			<div class="tabs__content-item">
-				<div class="tabs-acc__btn">Доставка</div>
-				<div class="tabs-acc__cnt">
-					<p>Трубы электросварные оцинкованные 89х3.5 оцинкованная ГОСТ 10704, 10705 по лучшей цене вы можете купить на нашем сайте. Металлгарант давно занимается продажей труб и знает в них толк. Мы отгружаем продукцию оптом и в розницу и работаем с любыми объемами – метра или километр – нам не важно. Вся продукция находится в наличии на нашем складе в СПб. Трубы электросварные оцинкованные 89х3.5 оцинкованная производится в соответствии с ГОСТ 10704-91 или ГОСТ 10705-91. Без применения этой трубы еще не построили ни один дом, в котором есть водопровод и отопительные коммуникации.</p>
-					<div class="b mb-3">Основные области применения:</div>
-					<ul class="list_string">
-						<li>Создание отопительных систем и трубопроводов;</li>
-						<li>Сельском хозяйстве; Изготовление металлоконструкций и строительство;</li>
-						<li>ЖКХ;</li>
-						<li>Производство деталей трубопроводов.</li>
-					</ul>
-					<p>Мы отгружаем продукцию оптом и в розницу и работаем с любыми объемами – метра или километр – нам не важно. Вся продукция находится в наличии на нашем складе в СПб. Трубы электросварные оцинкованные 89х3.5 оцинкованная производится в соответствии с ГОСТ 10704-91 или ГОСТ 10705-91. Без применения этой трубы еще не построили ни один дом, в котором есть водопровод и отопительные коммуникации.</p>
-					<p>Мы отгружаем продукцию оптом и в розницу и работаем с любыми объемами – метра или километр – нам не важно. Вся продукция находится в наличии на нашем складе в СПб. Трубы электросварные оцинкованные 89х3.5 оцинкованная производится в соответствии с ГОСТ 10704-91 или ГОСТ 10705-91. Без применения этой трубы еще не построили ни один дом, в котором есть водопровод и отопительные коммуникации.</p>
+		</div>
+		<div class="header__bot">
+			<div class="container">
+				<div class="d-flex justify-content-between align-items-start">
+					<a class="header__logo" href="#">
+						<span>Сортмет</span>
+						<span>Гипермаркет металла</span>
+					</a>
+					<div class="header__bot-col my-auto">
+						<div class="header__title">Доставка в день обращения, оплата по факту</div>
+					</div>
+					<div class="header__bot-col">
+						<div class="d-flex flex-column align-items-start">
+							<a class="header__tel" href="#">+7 (495) 123-30-40</a>
+							<a class="header__tel" href="#">+7 (800) 200-69-40</a>
+							<span class="fz13">Звонок бесплатный 09:00 – 18:00</span>
+							<button class="header__popup-btn fz13" data-fancybox data-src="popup-call">Заказать звонок</button>
+						</div>
+					</div>
+					<div class="header__bot-col">
+						<div class="d-flex flex-column">
+							<div class="d-flex align-items-start header__cont">
+								<svg fill="#D60000" height="12" viewBox="0 0 10 12" width="10" xmlns="http://www.w3.org/2000/svg">
+									<path clip-rule="evenodd" d="M5 1.00001C3.93913 1.00001 2.92172 1.42144 2.17158 2.17159C1.42143 2.92174 1 3.93917 1 5.00004C1 6.54908 2.00787 8.05219 3.11298 9.21871C3.65531 9.79117 4.19933 10.2598 4.60834 10.5855C4.76056 10.7067 4.89351 10.8077 5 10.8864C5.10649 10.8077 5.23944 10.7067 5.39166 10.5855C5.80067 10.2598 6.34469 9.79117 6.88702 9.21871C7.99213 8.05219 9 6.54908 9 5.00004C9 3.93917 8.57858 2.92174 7.82843 2.17159C7.07828 1.42144 6.06087 1.00001 5 1.00001ZM5 11.5001C4.72265 11.9161 4.72238 11.9159 4.72238 11.9159L4.72095 11.915L4.71762 11.9128L4.70616 11.905C4.69643 11.8984 4.68254 11.8889 4.66478 11.8766C4.62927 11.852 4.57824 11.8162 4.5139 11.7697C4.38528 11.6768 4.20318 11.5412 3.98541 11.3678C3.55067 11.0216 2.96969 10.5215 2.38702 9.90646C1.24213 8.69795 0 6.95103 0 5.00004C2.98023e-08 3.67395 0.526788 2.40218 1.46447 1.46449C2.40215 0.5268 3.67392 0 5 0C6.32608 0 7.59786 0.5268 8.53554 1.46449C9.47322 2.40218 10 3.67395 10 5.00004C10 6.95103 8.75787 8.69795 7.61298 9.90646C7.03031 10.5215 6.44933 11.0216 6.01459 11.3678C5.79682 11.5412 5.61473 11.6768 5.48611 11.7697C5.42177 11.8162 5.37073 11.852 5.33522 11.8766C5.31746 11.8889 5.30358 11.8984 5.29385 11.905L5.28239 11.9128L5.27905 11.915L5.27799 11.9157C5.27799 11.9157 5.27735 11.9161 5 11.5001ZM5 11.5001L5.27735 11.9161C5.1094 12.0281 4.89033 12.0279 4.72238 11.9159L5 11.5001Z" fill-rule="evenodd"/>
+									<path clip-rule="evenodd" d="M5 4.00003C4.44772 4.00003 4 4.44775 4 5.00004C4 5.55233 4.44772 6.00005 5 6.00005C5.55228 6.00005 6 5.55233 6 5.00004C6 4.44775 5.55228 4.00003 5 4.00003ZM3 5.00004C3 3.89546 3.89543 3.00003 5 3.00003C6.10457 3.00003 7 3.89546 7 5.00004C7 6.10462 6.10457 7.00006 5 7.00006C3.89543 7.00006 3 6.10462 3 5.00004Z" fill-rule="evenodd"/>
+								</svg>
+								<span class="und fz13">г.Люберцы, ул.3-е Почтовое отделение 102, оф. 424</span>
+							</div>
+							<a class="d-flex align-items-start header__cont" href="mailto:zakaz28@sortmet.ru">
+								<svg fill="#D60000" height="9" viewBox="0 0 11 9" width="11" xmlns="http://www.w3.org/2000/svg">
+									<path clip-rule="evenodd" d="M1.50003 1C1.22617 1 1.00003 1.22614 1.00003 1.5V7.5C1.00003 7.77386 1.22617 8 1.50003 8H9.49997C9.77382 8 9.99996 7.77386 9.99996 7.5V1.5C9.99996 1.22614 9.77382 1 9.49997 1H1.50003ZM4.09078e-05 1.5C4.09078e-05 0.673858 0.673893 0 1.50003 0H9.49997C10.3261 0 11 0.673858 11 1.5V7.5C11 8.32614 10.3261 9 9.49997 9H1.50003C0.673893 9 4.09078e-05 8.32614 4.09078e-05 7.5V1.5Z" fill-rule="evenodd"/>
+									<path clip-rule="evenodd" d="M0.0904257 1.21326C0.248782 0.987032 0.560547 0.932036 0.78677 1.09039L5.5 4.38968L10.2132 1.09039C10.4395 0.932036 10.7512 0.987032 10.9096 1.21326C11.0679 1.43948 11.0129 1.75125 10.7867 1.90961L5.78673 5.40961C5.61457 5.53012 5.38543 5.53012 5.21327 5.40961L0.213311 1.90961C-0.0129116 1.75125 -0.0679304 1.43948 0.0904257 1.21326Z" fill-rule="evenodd"/>
+								</svg>
+								<span class="bold und fz13">zakaz28@sortmet.ru</span>
+							</a>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="tabs__content-item">
-				<div class="tabs-acc__btn">Оплата</div>
-				<div class="tabs-acc__cnt">
-					<p>Трубы электросварные оцинкованные 89х3.5 оцинкованная ГОСТ 10704, 10705 по лучшей цене вы можете купить на нашем сайте. Металлгарант давно занимается продажей труб и знает в них толк. Мы отгружаем продукцию оптом и в розницу и работаем с любыми объемами – метра или километр – нам не важно. Вся продукция находится в наличии на нашем складе в СПб. Трубы электросварные оцинкованные 89х3.5 оцинкованная производится в соответствии с ГОСТ 10704-91 или ГОСТ 10705-91. Без применения этой трубы еще не построили ни один дом, в котором есть водопровод и отопительные коммуникации.</p>
-					<div class="b mb-3">Основные области применения:</div>
-					<ul class="list_string">
-						<li>Создание отопительных систем и трубопроводов;</li>
-						<li>Сельском хозяйстве; Изготовление металлоконструкций и строительство;</li>
-						<li>ЖКХ;</li>
-						<li>Производство деталей трубопроводов.</li>
-					</ul>
-					<p>Мы отгружаем продукцию оптом и в розницу и работаем с любыми объемами – метра или километр – нам не важно. Вся продукция находится в наличии на нашем складе в СПб. Трубы электросварные оцинкованные 89х3.5 оцинкованная производится в соответствии с ГОСТ 10704-91 или ГОСТ 10705-91. Без применения этой трубы еще не построили ни один дом, в котором есть водопровод и отопительные коммуникации.</p>
-					<p>Мы отгружаем продукцию оптом и в розницу и работаем с любыми объемами – метра или километр – нам не важно. Вся продукция находится в наличии на нашем складе в СПб. Трубы электросварные оцинкованные 89х3.5 оцинкованная производится в соответствии с ГОСТ 10704-91 или ГОСТ 10705-91. Без применения этой трубы еще не построили ни один дом, в котором есть водопровод и отопительные коммуникации.</p>
+		</div>
+	</header>
+	<div class="navbar">
+		<div class="container">
+			<div class="d-flex flex-wrap flex-xl-nowrap align-items-center">
+				<div class="content__col_left">
+					<nav class="main-nav">
+						<div class="main-nav__btn">
+							<div class="d-flex align-items-center">
+								<img alt="main-nav__bars.svg" src="img/main-nav__bars.svg">
+								<span>Каталог товаров</span>
+							</div>
+						</div>
+						<div class="main-nav__list">
+							<div class="d-flex flex-column">
+								<a class="main-nav__link" href="#">
+									<div class="d-flex align-items-center">
+										<div class="main-nav__link-icon">
+											<img alt="main-nav__icon_1.svg" src="img/main-nav__icon_1.svg">
+										</div>
+										<span>Сортовой прокат</span>
+									</div>
+									<span class="main-nav__link-arr">
+										<svg height="8" viewBox="0 0 5 8" width="5" xmlns="http://www.w3.org/2000/svg">
+											<path d="M1 1L4 4L1 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+										</svg>
+									</span>
+								</a>
+								<a class="main-nav__link" href="#">
+									<div class="d-flex align-items-center">
+										<div class="main-nav__link-icon">
+											<img alt="main-nav__icon_2.svg" src="img/main-nav__icon_2.svg">
+										</div>
+										<span>Листовой прокат</span>
+									</div>
+									<span class="main-nav__link-arr">
+										<svg height="8" viewBox="0 0 5 8" width="5" xmlns="http://www.w3.org/2000/svg">
+											<path d="M1 1L4 4L1 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+										</svg>
+									</span>
+								</a>
+								<a class="main-nav__link" href="#">
+									<div class="d-flex align-items-center">
+										<div class="main-nav__link-icon">
+											<img alt="main-nav__icon_3.svg" src="img/main-nav__icon_3.svg">
+										</div>
+										<span>Трубы</span>
+									</div>
+									<span class="main-nav__link-arr">
+										<svg height="8" viewBox="0 0 5 8" width="5" xmlns="http://www.w3.org/2000/svg">
+											<path d="M1 1L4 4L1 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+										</svg>
+									</span>
+								</a>
+								<a class="main-nav__link" href="#">
+									<div class="d-flex align-items-center">
+										<div class="main-nav__link-icon">
+											<img alt="main-nav__icon_4.svg" src="img/main-nav__icon_4.svg">
+										</div>
+										<span>Проволока и сетка</span>
+									</div>
+									<span class="main-nav__link-arr">
+										<svg height="8" viewBox="0 0 5 8" width="5" xmlns="http://www.w3.org/2000/svg">
+											<path d="M1 1L4 4L1 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+										</svg>
+									</span>
+								</a>
+								<a class="main-nav__link" href="#">
+									<div class="d-flex align-items-center">
+										<div class="main-nav__link-icon">
+											<img alt="main-nav__icon_5.svg" src="img/main-nav__icon_5.svg">
+										</div>
+										<span>Нержавеющая сталь</span>
+									</div>
+									<span class="main-nav__link-arr">
+										<svg height="8" viewBox="0 0 5 8" width="5" xmlns="http://www.w3.org/2000/svg">
+											<path d="M1 1L4 4L1 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+										</svg>
+									</span>
+								</a>
+								<a class="main-nav__link" href="#">
+									<div class="d-flex align-items-center">
+										<div class="main-nav__link-icon">
+											<img alt="main-nav__icon_6.svg" src="img/main-nav__icon_6.svg">
+										</div>
+										<span>Цветные металлы</span>
+									</div>
+									<span class="main-nav__link-arr">
+										<svg height="8" viewBox="0 0 5 8" width="5" xmlns="http://www.w3.org/2000/svg">
+											<path d="M1 1L4 4L1 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+										</svg>
+									</span>
+								</a>
+								<a class="main-nav__link" href="#">
+									<div class="d-flex align-items-center">
+										<div class="main-nav__link-icon">
+											<img alt="main-nav__icon_7.svg" src="img/main-nav__icon_7.svg">
+										</div>
+										<span>Металлообработка</span>
+									</div>
+									<span class="main-nav__link-arr">
+										<svg height="8" viewBox="0 0 5 8" width="5" xmlns="http://www.w3.org/2000/svg">
+											<path d="M1 1L4 4L1 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+										</svg>
+									</span>
+								</a>
+							</div>
+						</div>
+					</nav>
+				</div>
+				<div class="content__col_right">
+					<form action="" class="main-search w-100">
+						<input class="main-search__query" placeholder="Поиск среди 10 тысяч товаров. Введите запрос." type="text">
+						<button class="main-search__btn" type="submit">
+							<svg height="18" viewBox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg">
+								<path clip-rule="evenodd" d="M8.09999 1.8C4.6206 1.8 1.8 4.62061 1.8 8.10001C1.8 11.5794 4.6206 14.4 8.09999 14.4C11.5794 14.4 14.4 11.5794 14.4 8.10001C14.4 4.62061 11.5794 1.8 8.09999 1.8ZM0 8.10001C0 3.6265 3.62649 0 8.09999 0C12.5735 0 16.2 3.6265 16.2 8.10001C16.2 12.5735 12.5735 16.2 8.09999 16.2C3.62649 16.2 0 12.5735 0 8.10001Z" fill-rule="evenodd"/>
+								<path clip-rule="evenodd" d="M12.5486 12.5486C12.9001 12.1971 13.4699 12.1971 13.8214 12.5486L17.7364 16.4636C18.0879 16.8151 18.0879 17.3849 17.7364 17.7364C17.3849 18.0879 16.8151 18.0879 16.4636 17.7364L12.5486 13.8214C12.1971 13.4699 12.1971 12.9001 12.5486 12.5486Z" fill-rule="evenodd"/>
+							</svg>
+						</button>
+					</form>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div id="popup_call" class="popup__container" style="display:none">
+	<div class="content">
+		<div class="container">
+			<div class="d-flex d-flex flex-wrap flex-xl-nowrap">
+				<div class="content__col_left"></div>
+				<div class="content__col_right">
+					<div class="main-slider owl-carousel">
+						<div class="main-slider__item" style="background-image: url(img/main-slider__img_1.jpg);">
+							<div class="main-slider-ttl">Возможна <br>оплата <br>на объекте</div>
+						</div>
+						<div class="main-slider__item" style="background-image: url(img/main-slider__img_1.jpg);">
+							<div class="main-slider-ttl">Возможна <br>оплата <br>на объекте</div>
+						</div>
+						<div class="main-slider__item" style="background-image: url(img/main-slider__img_1.jpg);">
+							<div class="main-slider-ttl">Возможна <br>оплата <br>на объекте</div>
+						</div>
+					</div>
+					<section class="section_inner pb-0">
+						<div class="section__subttl">Мы продаем</div>
+						<div class="ware">
+							<div class="ware__in owl-carousel">
+								<form class="ware__item">
+									<div>Артикул: <span class="red">1234567</span></div>
+									<div class="ware__item-img" style="background-image: url(img/ware__img_1.jpg);"></div>
+									<a class="ware__item-ttl" href="#">Трубы нерж. бесшовные 20х2</a>
+									<div class="ware__item-price">
+										<span>810 930</span>&nbsp;р./тн
+									</div>
+									<button class="btn" type="submit">Заказать</button>
+								</form>
+								<form class="ware__item">
+									<div>Артикул: <span class="red">1234567</span></div>
+									<div class="ware__item-img" style="background-image: url(img/ware__img_2.jpg);"></div>
+									<a class="ware__item-ttl" href="#">Трубы нерж. эсв имп зерк , длина - 6000мм</a>
+									<div class="ware__item-price">
+										<span>810 930</span>&nbsp;р./тн
+									</div>
+									<button class="btn" type="submit">Заказать</button>
+								</form>
+								<form class="ware__item">
+									<div>Артикул: <span class="red">1234567</span></div>
+									<div class="ware__item-img" style="background-image: url(img/ware__img_3.jpg);"></div>
+									<a class="ware__item-ttl" href="#">Трубы х/д 48х10, длина - 12000мм</a>
+									<div class="ware__item-price">
+										<span>134 490</span>&nbsp;р./тн
+									</div>
+									<button class="btn" type="submit">Заказать</button>
+								</form>
+								<form class="ware__item">
+									<div>Артикул: <span class="red">1234567</span></div>
+									<div class="ware__item-img" style="background-image: url(img/ware__img_4.jpg);"></div>
+									<a class="ware__item-ttl" href="#">Лист медный  10x600x1500 мяг</a>
+									<div class="ware__item-price">
+										<span>581 000</span>&nbsp;р./тн
+									</div>
+									<button class="btn" type="submit">Заказать</button>
+								</form>
+								<form class="ware__item">
+									<div>Артикул: <span class="red">1234567</span></div>
+									<div class="ware__item-img" style="background-image: url(img/ware__img_1.jpg);"></div>
+									<a class="ware__item-ttl" href="#">Трубы нерж. бесшовные 20х2</a>
+									<div class="ware__item-price">
+										<span>810 930</span>&nbsp;р./тн
+									</div>
+									<button class="btn" type="submit">Заказать</button>
+								</form>
+							</div>
+						</div>
+					</section>
+					<section class="section_inner pb-0">
+						<div class="section__ttl">5 лет на рынке металлопроката</div>
+						<div class="row">
+							<div class="col-sm-6 mb-3 mb-xl-4">
+								<div class="test__item">
+									<div class="test__item-icon">
+										<img alt="test__img_1.svg" src="img/test__img_1.svg">
+									</div>
+									<div class="d-flex flex-column">
+										<div class="test__item-ttl">Доставка день в день</div>
+										<div class="test__item-descr">Доставка в день обращения, если заказ был
+											осуществле до обеда
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 mb-3 mb-xl-4">
+								<div class="test__item">
+									<div class="test__item-icon">
+										<img alt="test__img_2.svg" src="img/test__img_2.svg">
+									</div>
+									<div class="d-flex flex-column">
+										<div class="test__item-ttl">Доставляем по всей РФ</div>
+										<div class="test__item-descr">Доствим в любой город РФ своим транспортом или транспортной компанией</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 mb-3">
+								<div class="test__item">
+									<div class="test__item-icon">
+										<img alt="test__img_3.svg" src="img/test__img_3.svg">
+									</div>
+									<div class="d-flex flex-column">
+										<div class="test__item-ttl">Оплата на объекте</div>
+										<div class="test__item-descr">Возможна оплата на объекте после того как приехал транспорт</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-6 mb-3">
+								<div class="test__item">
+									<div class="test__item-icon">
+										<img alt="test__img_4.svg" src="img/test__img_4.svg">
+									</div>
+									<div class="d-flex flex-column">
+										<div class="test__item-ttl">Отсрочка платежа</div>
+										<div class="test__item-descr">Постоянным клиентам готовы предоставить отсрочку платежа</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="section_inner pb-0">
+						<div class="row">
+							<div class="col-xl-6">
+								<div class="sup">
+									<div class="section__subttl">Наши поставщики</div>
+									<div class="px-3">
+										<div class="sup__in owl-carousel mb-3">
+											<div class="sup__col d-flex flex-column align-items-center">
+												<div class="sup__item">
+													<img alt="sup__img_1.png" src="img/sup__img_1.png">
+												</div>
+												<div class="sup__item">
+													<img alt="sup__img_2.png" src="img/sup__img_2.png">
+												</div>
+												<div class="sup__item">
+													<img alt="sup__img_3.png" src="img/sup__img_3.png">
+												</div>
+											</div>
+											<div class="sup__col d-flex flex-column align-items-center">
+												<div class="sup__item">
+													<img alt="sup__img_4.png" src="img/sup__img_4.png">
+												</div>
+												<div class="sup__item">
+													<img alt="sup__img_5.png" src="img/sup__img_5.png">
+												</div>
+												<div class="sup__item">
+													<img alt="sup__img_6.png" src="img/sup__img_6.png">
+												</div>
+											</div>
+											<div class="sup__col d-flex flex-column align-items-center">
+												<div class="sup__item">
+													<img alt="sup__img_7.png" src="img/sup__img_7.png">
+												</div>
+												<div class="sup__item">
+													<img alt="sup__img_8.png" src="img/sup__img_8.png">
+												</div>
+												<div class="sup__item">
+													<img alt="sup__img_9.png" src="img/sup__img_9.png">
+												</div>
+											</div>
+											<div class="sup__col d-flex flex-column align-items-center">
+												<div class="sup__item">
+													<img alt="sup__img_1.png" src="img/sup__img_1.png">
+												</div>
+												<div class="sup__item">
+													<img alt="sup__img_2.png" src="img/sup__img_2.png">
+												</div>
+												<div class="sup__item">
+													<img alt="sup__img_3.png" src="img/sup__img_3.png">
+												</div>
+											</div>
+										</div>
+										<a class="d-flex align-items-center" href="#">
+											<img alt="link__arr.svg" src="img/link__arr.svg" class="mt-1">
+											<span class="link_dec ml-2">все поставщики</span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-6">
+								<div class="cus">
+									<div class="section__subttl">У нас покупают</div>
+									<img alt="cus__img.jpg" class="d-block mx-auto mt-3 mt-xl-4" src="img/cus__img.jpg">
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="section_inner pb-0">
+						<div class="row">
+							<div class="col-xl-6">
+								<div class="section__subttl">Наши новости</div>
+								<div class="news__list">
+									<a href="#" class="news__list-item">
+										<div class="news__list-item-img">
+											<img alt="news__list-img_1.jpg" class="img-fluid" src="img/news__list-img_1.jpg">
+										</div>
+										<div class="d-flex flex-column">
+											<div class="news__list-item-ttl link_dec">Сервисные центры партнеров
+												<br>СОРТМЕТ.ру</div>
+											<div class="news__list-item-descr">Хотите сдать инструмент для обслуживания и ремонта в своем городе? Вам не придется долго ждать, пока его доставят в Москву в наш сервисный центр. Мы сотрудничаем с надежными партнерами в регионах, для которых обслуживание клиентов СОРТМЕТ.ру в приоритете. Обращайтесь!</div>
+										</div>
+									</a>
+									<a href="#" class="news__list-item">
+										<div class="news__list-item-img">
+											<img alt="news__list-img_2.jpg" class="img-fluid" src="img/news__list-img_2.jpg">
+										</div>
+										<div class="d-flex flex-column">
+											<div class="news__list-item-ttl link_dec">Порядок бережет время! Системы хранения + подарки от STANLEY</div>
+											<div class="news__list-item-descr">Что определяет срок службы инструментов? Бережное отношение во всем: начиная от содержания их в чистом виде и заканчивая грамотным хранением и переноской. Многие мастера уже давно пользуются ящиками, рюкзаками и сумками STANLEY и оценивают их по достоинству. Хотите узнать больше о системах хранения? А подарки получить хотите? Поможем с выбором и раскроем подробности акции!</div>
+										</div>
+									</a>
+									<a href="#" class="news__list-item">
+										<div class="news__list-item-img">
+											<img alt="news__list-img_3.jpg" class="img-fluid" src="img/news__list-img_3.jpg">
+										</div>
+										<div class="d-flex flex-column">
+											<div class="news__list-item-ttl link_dec">И с проводом, и без провода: аккумуляторный паяльник Ryobi R18SOI</div>
+											<div class="news__list-item-descr">Паяльник Ryobi R18SOI работает на 18-вольтовой батарее линейки One+ и имеет полноценную долговременную мощность в 40 Вт. Его, разумеется, не хватит для ремонта прохудившегося ведра или текущего радиатора УАЗика, но вполне достаточно для выполнения большинства среднестатистических электромонтажных задач вдали от розетки.</div>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="col-xl-6">
+								<div class="serv">
+									<div class="section__subttl">Наши Услуги</div>
+									<div class="row no-gutters">
+										<div class="col-xl-6 serv_item-wrp">
+											<a href="#" class="serv__item" style="background-image: url(img/serv__img_1.jpg);">
+												<span class="bold mb-2">Гибка металла</span>
+												<span class="serv__item-descr">Компания «СОРТАМЕНТ» предоставляет услуги гибки металлопроката</span>
+												<img src="img/link__arr.svg" alt="link__arr.svg" class="mt-auto">
+											</a>
+										</div>
+										<div class="col-xl-6 serv_item-wrp">
+											<a href="#" class="serv__item" style="background-image: url(img/serv__img_2.jpg);">
+												<span class="bold mb-2">Изготовление металлоконструкций</span>
+												<span class="serv__item-descr">Компания «СОРТАМЕНТ» занимается изготовлением металлоконструкций на заказ масштабов работ.</span>
+												<img src="img/link__arr.svg" alt="link__arr.svg" class="mt-auto">
+											</a>
+										</div>
+										<div class="col-xl-6 serv_item-wrp">
+											<a href="#" class="serv__item" style="background-image: url(img/serv__img_3.jpg);">
+												<span class="bold mb-2">Сварочные услуги</span>
+												<span class="serv__item-descr">Здесь будет тестовый текст, Здесь будет тестовый текст, Здесь будет тестовый текст, </span>
+												<img src="img/link__arr.svg" alt="link__arr.svg" class="mt-auto">
+											</a>
+										</div>
+										<div class="col-xl-6 serv_item-wrp">
+											<a href="#" class="serv__item" style="background-image: url(img/serv__img_4.jpg);">
+												<span class="bold mb-2">Резка металла</span>
+												<span class="serv__item-descr">Компания «СОРТАМЕНТ» предоставляет услуги резки и сварки металлопроката</span>
+												<img src="img/link__arr.svg" alt="link__arr.svg" class="mt-auto">
+											</a>
+										</div>
+										<div class="col-xl-6 serv_item-wrp">
+											<a href="#" class="serv__item" style="background-image: url(img/serv__img_5.jpg);">
+												<span class="bold mb-2">Рубка гильятиной</span>
+												<span class="serv__item-descr">Компания «СОРТАМЕНТ» выполняет рубку листового металлопроката на гильотине</span>
+												<img src="img/link__arr.svg" alt="link__arr.svg" class="mt-auto">
+											</a>
+										</div>
+										<div class="col-xl-6 serv_item-wrp">
+											<a href="#" class="serv__item" style="background-image: url(img/serv__img_6.jpg);">
+												<span class="bold mb-2">Покраска металла</span>
+												<span class="serv__item-descr">Здесь будет тестовый текст, Здесь будет тестовый текст, </span>
+												<img src="img/link__arr.svg" alt="link__arr.svg" class="mt-auto">
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="popup__container" id="popup_call" style="display:none">
 		<div  class="popup__wrp popup_call__wrp">
-			<form action="[[~[[*id]]]]" method="post" class="popup">
+			<form action="[[~[[*id]]]]" class="popup" method="post">
 				<h3 class="popup__ttl">Оставьте заявку</h3>
 				<div class="input__wrp input__wrp_name">
-					<input type="text" class="form__input" name="popup_call__name" placeholder="Ваше имя" required="">
+					<input class="form__input" name="popup_call__name" placeholder="Ваше имя" required="" type="text">
 				</div>
 				<div class="input__wrp input__wrp_tel">
-					<input type="tel" class="form__input" name="popup_call__tel" placeholder="Телефон" required="">
+					<input class="form__input" name="popup_call__tel" placeholder="Телефон" required="" type="tel">
 				</div>
 				<div class="input__wrp input__wrp_mail">
-					<input type="email" class="form__input" name="popup_call__email" placeholder="E-mail">
+					<input class="form__input" name="popup_call__email" placeholder="E-mail" type="email">
 				</div>
-				<input type="submit" class="btn" name="popup_call__sumbit" value="Заказать">
+				<input class="btn" name="popup_call__sumbit" type="submit" value="Заказать">
 				<div class="popup__policy">
-					Нажимая кнопку "Отправить", вы соглашаетесь с <a href="#" class="form__policy-link">политикой конфиденциальности</a>
+					Нажимая кнопку "Отправить", вы соглашаетесь с <a class="form__policy-link" href="#">политикой конфиденциальности</a>
 				</div>
 			</form>
 		</div>

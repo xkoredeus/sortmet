@@ -1,587 +1,931 @@
 @import "../fonts/fonts.css"
-$mid-blue: #072754
-$dark-blue: #05162E
-$blue: #008CFF
-$yellow: #F18E02
+$dark: #1A1A1A
+$ldark: #3A3A3A
+$red: #D60000
+$lred: #CB0909
+$gr: #E9E9E9
+$lgr: #F9F6F6
+$dgr: #D1D2D3
 $tr: transparent
-$wt: #E3E3E3
-$a-lig: 'AvenirNextCyr-Light'
-$a-reg: 'AvenirNextCyr-Regular'
-$a-med: 'AvenirNextCyr-Medium'
-$a-demi: 'AvenirNextCyr-Demi'
-$a-bold: 'AvenirNextCyr-Bold'
 
+$r-reg: 'Roboto-Regular'
+$r-black: 'Roboto-Black'
+$r-bold: 'Roboto-Bold'
+$r-med: 'Roboto-Medium'
+
+@mixin ct
+  background-position: 50% 50%
+  background-size: contain
+  background-repeat: no-repeat
+@mixin cv
+  background-position: 50% 50%
+  background-size: cover
+  background-repeat: no-repeat
+@mixin ovl
+  content: ''
+  position: absolute
+  width: 100%
+  height: 100%
+  left: 0
+  top: 0
+@mixin ease
+  transition: .3s all ease
+@mixin r($width)
+  @media only screen and (max-width: $width + "px")
+    @content
+@mixin rmin($width)
+  @media only screen and (min-width: $width + "px")
+    @content
 body
-	scroll-behavior: smooth
-	background-color: #fff
-	font-family: $a-reg, sans-serif
-	color: $dark-blue
-	font-size: 14px
-	line-height: 1.4
-	position: relative
-	-webkit-font-smoothing: antialiased
-*,
-*:after,
-*:before
-	transition: .3s all ease
+  scroll-behavior: smooth
+  background-color: #fff
+  font-family: $r-reg, sans-serif
+  color: $dark
+  font-size: 14px
+  line-height: 1.4
+  position: relative
+  -webkit-font-smoothing: antialiased
+  &.fixed
+    overflow: hidden
+    padding-right: 15px
+
 h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection, p::selection, a::selection, span::selection, div::selection, img::selection, mark::selection, ul::selection, li::selection
-	color						: #fff
-	background-color : $dark-blue
+  color           : #fff
+  background-color : $dark
 ::selection
-	color						: #fff
-	background-color : $dark-blue
+  color           : #fff
+  background-color : $dark
 a, a:hover, a:active, a:focus,
 button, input, button:hover, button:active, button:focus,
 input:focus, input:active, .btn, .btn:after, select:focus, select:active
-	text-decoration: none
-	outline: none
-	transition: all 0.4s ease
-	cursor: pointer
+  text-decoration: none
+  outline: none
+  transition: all 0.4s ease
+  cursor: pointer
 a
-	color: $dark-blue
-	&:hover
-		color: $yellow
+  color: $dark
+  &:hover
+    color: $lred
 button
-	border: transparent
-	background: none
+  border: transparent
+  background: none
 option
-	color: $dark-blue
+  color: $dark
 textarea
-	resize:none
-	overflow: hidden
-	&::placeholder
-		color: $dark-blue
+  resize: none !important
+  overflow: hidden
+  &::placeholder
+    color: $dark
 input,
 textarea,
 select
-	color: $dark-blue
-	font-family: $a-med
-	font-size: 14px
-	padding: 12px 30px
-	border-radius: 2px
-	border: 1px solid #E0E0E0
+  color: $dark
+  font-family: $r-reg, sans-serif
+  font-size: 14px
+  padding: 12px 25px
+  border-radius: 3px
+  border: none
+  border: 1px solid $dark
+  transition: all .4s ease
 // input,
 // select
-// 	border: 1px solid #fff
+//  border: 1px solid #fff
 input[type="text"]::placeholder,
 input[type="email"]::placeholder,
 input[type="tel"]::placeholder
-	color: $dark-blue
+  color: $dark
 input:focus,
 textarea:focus,
 input:active,
 textarea:active
-	// background: #ffff
-	color: $dark-blue
-	box-shadow: inset 0px 0px 5px 1px $yellow
-	outline: none
+  color: $dark
+  border-color: $lred
+  outline: none
 input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button 
-	-webkit-appearance: none
+input::-webkit-inner-spin-button
+  -webkit-appearance: none
 input[type="number"]
-	-moz-appearance: textfield
-	appearance: textfield
-.select__wrp
-	border: 1px solid #BDBDBD
-	border-radius: 3px
-	position: relative
-	display: flex
-	background-color: #fff
-	&::before
-		content: ''
-		position: absolute
-		width: 20px
-		height: 20px
-		background: url('../img/select__arr.png') no-repeat 50% 50% / contain
-		top: 50%
-		transform: translateY(-50%)
-		right: 9px
-	select
-		width: 100%
-		background-color: $tr
-		border: none
-		padding: 8px 40px 8px 12px
-		position: relative
-		appearance: none
-		option
-			width: 100%
-	&:hover
-		&::before
-			transform: translateY(-50%) scale(.9)
-.quantity
-	position: relative
-	max-width: 129px
-	input
-		width: 100%
-	&-num
-		// max-width: 110px
-		text-align: center
-	&-minus,
-	&-plus
-		position: absolute
-		height: 50%
-		top: 50%
-		transform: translate(0,-50%)
-		font-family: $a-bold
-		width: 22px
-		height: 22px
-		background-color: #F3F3F3
-		border: none
-		border-radius: 50%
-		display: flex
-		justify-content: center
-		align-items: center
-		line-height: 1
-		&:hover
-			background-color: #ccc
-	&-minus
-		left: 15px
-		color: $blue
-	&-plus
-		right: 15px
-		color: $yellow
-.fancybox-container *
-		transition: unset
-.tabs
-	&__content-item
-		transition: unset
-	&__list
-		list-style-type: none
-		padding: 0
-		margin: 0
-	&-acc
-		&__btn
-			display: none
-			width: 100%
-			padding: 12px 25px
-			background-color: #E0E0E0
-			font-weight: bold
-			text-align: center
-			cursor: pointer
-			border: 1px solid #fff
-			&.active
-				background-color: #ccc
-				color: #fff
-		&__cnt
-			transition: unset
-.checkbox
-	cursor: pointer
-	position: relative
-	margin-bottom: 0
-	input[type="checkbox"],
-	input[type="radio"]
-		position: absolute
-		z-index: 1
-		opacity: 0
-		width: 100%
-		height: 20px
-		cursor: pointer
-	.checkbox__text
-		font-size: 14px
-		position: relative
-		padding-left: 30px
-		cursor: pointer
-		width: 100%
-		height: 30px
-		display: block
-		&::before
-			content: ''
-			position: absolute
-			top: 0px
-			left: -2px
-			width: 20px
-			height: 20px
-			border-radius: 2px
-			border: 1px solid #c3c2c2
-			background: #fff
-		&::after
-			content: ''
-			position: absolute
-			top: 50%
-			margin-top: -11px
-			left: 2px
-			width: 12px
-			height: 12px
-			background-color: $blue
-			border-radius: 2px
-			opacity: 0
-			transform: scale(0)
-			transition: 0.2s
-		a
-			color: $blue
-			text-decoration: underline
-			position: relative
-			z-index: 2
-	input[type="checkbox"]:checked + .checkbox__text:after,
-	input[type="radio"]:checked + .checkbox__text:after
-		opacity: 1
-		transform: scale(1)
-	input[type="checkbox"]:checked + .checkbox__text:before,
-	input[type="radio"]:checked + .checkbox__text:before
-		background-color: #fff
-		// border: 1px solid #39B54A
-	// input[type="checkbox"]:focus + .checkbox__text:before
-	// 	box-shadow: inset 0 1px 2px rgba(0,0,0,.2), 0 0 0 1px rgba(49, 179, 237, 0.61)
-.img-fluid
-	max-width: 100%
-	height: auto
-.shd,
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
-	&:hover
-		box-shadow: 0px 30px 40px rgba(0, 80, 147, 0.25)
-.w100
-	width: 100%
-.b
-	font-family: $a-bold
-.m
-	font-family: $a-med
-.tac
-	text-align: center
-.tal
-	text-align: left !important
-.und
-	text-decoration: underline
-.upp
-	text-transform: uppercase
-.btn
-	outline: none
-	font-size: 14px
-	font-family: $a-med
-	letter-spacing: .5px
-	text-align: center
-	padding: 12px 30px
-	color: #fff
-	background-color: $yellow
-	display: inline-block
-	border-radius: 2px
-	position: relative
-	overflow: hidden
-	&>*
-		position: relative
-	&::before
-		content: ''
-		position: absolute
-		width: 138px
-		height: 138px
-		left: -210%
-		top: -80px
-		background: linear-gradient(272.36deg, #FFFFFF -11.72%, rgba(255, 255, 255, 0) 23.19%)
-		opacity: 0.5
-		transform: rotate(36.57deg)
-		transition: 3s all ease
-	&:hover
-		color: #fff
-		background-color: $blue
-		&::before
-			left: 150%
-	&_transp
-		color: #fff
-		background: transparent
-		border: 1px solid $dark-blue
-		&:hover
-			color: #fff
-			background-color: $blue
-			&::before
-				left: 150%
-	&_blue
-		background-color: $blue
-		&:hover
-			background-color: $yellow
-	&_white
-		background-color: #E3E3E3
-		box-shadow: 0px 2.65px 2.65px rgba(0, 0, 0, 0.2)
-		color: $dark-blue
-		&:hover
-			color: #fff
-			background-color: $blue
-	&_add
-		margin-left: auto
-		margin-right: auto
-		max-width: 192px
-		padding-right: 80px
-		overflow: hidden
-		box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2)
-		img
-			height: 100%
-			position: absolute
-			right: 0
-			top: 0
-		&:hover
-			img
-				transform: scale(1.05)
-	&_file
-		position: relative
-		color: #fff
-		cursor: pointer
-		max-width: 230px
-		padding-right: 56px
-		padding-left: 15px
-		.upload__file
-			width: 0.1px
-			height: 0.1px
-			opacity: 0
-			overflow: hidden
-			position: absolute
-			z-index: -1
-		label.filename
-			cursor: pointer
-			margin-bottom: 0
-			cursor: pointer
-		img
-			height: 100%
-			position: absolute
-			right: 0
-			top: 0
-		&:hover
-			img
-				transform: scale(1.05)
-		// .upload__file-status
-		// 	margin-left: 15px
-	&_subm
-		min-width: 190px
-		input[type="submit"]
-			color: #fff
-			background: none
-			padding: 0
-			border: none
-			margin: 0
-		&.btn_transp
-			border: none
-			background-color: #F3F3F3
-			box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2)
-			&:hover
-				background-color: #ccc
-			input[type="submit"]
-				color: #000
-.list
-	&_circle
-		list-style-type: none
-		padding-left: 0
-		li
-			padding-left: 25px
-			position: relative
-			&
-				margin-bottom: 10px
-			&::before
-				content: ''
-				position: absolute
-				width: 8px
-				height: 8px
-				background-color: #EE414F
-				left: 0
-				top: 8px
-				border-radius: 50%
-	&_string
-		list-style-type: none
-		padding-left: 0
-		li
-			padding-left: 25px
-			position: relative
-			&
-				margin-bottom: 10px
-			&::before
-				content: ''
-				position: absolute
-				width: 12px
-				height: 1px
-				background-color: $dark-blue
-				left: 0
-				top: 9px
-	&_num
-		padding-left: 0
-		counter-reset: list1
-		li
-			list-style-type: none
-			&
-				margin-bottom: 10px
-			&::before
-				counter-increment: list1
-				content: counter(list1)
-				color: $blue
-				font-size: 16px
-				font-family: $a-bold
-				margin-right: 15px
-
-.popup__container
-	padding: 40px
-	background-color: transparent
-	*,
-	*::before,
-	*::after
-		transition: .3s all ease
-	.fancybox-close-small
-		top: 40px
-		right: 40px
-		color: #000
-	.popup__wrp
-		display: -webkit-flex
-		display: -moz-flex
-		display: -ms-flex
-		display: -o-flex
-		display: flex
-		-webkit-flex-wrap: wrap
-		-moz-flex-wrap: wrap
-		-ms-flex-wrap: wrap
-		-o-flex-wrap: wrap
-		flex-wrap: wrap
-		-ms-align-items: center
-		align-items: center
-		justify-content: center
-		position: relative
-		&::before
-			z-index: 1
-			content: ''
-			position: absolute
-			height: 110%
-			width: 110%
-			top: -5%
-			right: -5%
-			bottom: -5%
-			left: -5%
-			z-index: 1
-			background-color: $dark-blue
-			opacity: .7
-	.popup_call__wrp
-		max-width: 320px
-		.popup
-			width: 100%
-			height: 100%
-			position: relative
-			z-index: 2
-			display: -webkit-flex
-			display: -moz-flex
-			display: -ms-flex
-			display: -o-flex
-			display: flex
-			-webkit-flex-direction: column
-			-moz-flex-direction: column
-			-ms-flex-direction: column
-			-o-flex-direction: column
-			flex-direction: column
-			-ms-align-items: center
-			align-items: center
-			justify-content: flex-start
-			background-color: #fff
-			color: $dark-blue
-			padding: 20px 25px 30px
-			text-align: center
-			&__ttl
-				font-family: $a-bold
-				text-transform: uppercase
-				font-size: 22px
-				margin-bottom: 30px
-			.form__input
-				border: 1px solid $dark-blue
-				color: $dark-blue
-				margin-bottom: 15px
-			input.form__input::placeholder
-				color: $dark-blue
-			.btn
-				width: 100%
-				margin-bottom: 15px
-			&__policy
-				margin-top: 15px
-				max-width: 230px
-				text-align: center
-				font-size: 12px
-				a
-					font-size: 12px 
-					color: #00BFF3
-.owl-carousel
-	.owl-item
-		img
-			width: auto !important
-	.owl-dots
-		position: absolute
-		width: 100%
-		display: flex
-		justify-content: center
-		bottom: 0
-		button.owl-dot
-			width: 13px
-			height: 13px
-			border: 2.5px solid #fff
-			border-radius: 50%
-			background-color: transparent
-			position: relative
-			// transform: scale(1)
-			&:not(:last-child)
-				margin-right: 10px
-			&.active
-				// transform: scale(.8)
-				border-color: transparent
-				background-color: #fff
-	.owl-nav
-		button.owl-prev,
-		button.owl-next
-			width: 31px
-			height: 31px
-			position: absolute
-			bottom: 50%
-			margin-bottom: -25.5px
-			border-radius: 50%
-			padding: 0
-			background-color: #fff
-			border: 1.5px solid $dark-blue
-			display: flex
-			justify-content: center
-			align-items: center
-			img
-				max-width: 17px
-				max-height: 17px
-				height: auto
-		button.owl-prev:hover,
-		button.owl-next:hover
-			background-color: $yellow
-			transform: scale(.9)
-			border-color: $yellow
-		button.owl-prev.disabled,
-		button.owl-next.disabled,
-		button.owl-prev.disabled:hover,
-		button.owl-next.disabled:hover
-			opacity: 0
-			cursor: default
-			
-		button.owl-prev
-			left: 0
-		button.owl-next
-			right: 0
-.section
-	&_inner
-		padding: 60px 0
-	&__ttl
-		font-size: 34px
-		font-family: $a-bold
-		letter-spacing: 1px
-		margin-bottom: 35px
-		text-align: center
-		text-transform: uppercase
-	&__subttl
-		font-size: 28px
-		font-family: $a-bold
-		letter-spacing: .5px
-		margin-bottom: 35px
-		margin-top: -10px
-		text-align: center
+  -moz-appearance: textfield
+  appearance: textfield
+//.select__wrp
+//  border: 1px solid #BDBDBD
+//  border-radius: 3px
+//  position: relative
+//  display: flex
+//  background-color: #fff
+//  &::before
+//    content: ''
+//    position: absolute
+//    width: 12px
+//    height: 7px
+//    background: url('../img/icon__arr_bot-blck.svg') no-repeat 50% 50% / contain
+//    top: 50%
+//    transform: translateY(-50%)
+//    right: 9px
+//    +ease
+//  select
+//    width: 100%
+//    background-color: $tr
+//    border: none
+//    padding: 12px 25px 12px 15px
+//    position: relative
+//    appearance: none
+//    option
+//      width: 100%
+//  &:hover
+//    &::before
+//      top: 54%
+//      transform: translateY(-50%)
 .input__wrp
-	position: relative
-	max-width: 230px
-	input,
-	select
-		width: 100%
-		padding-left: 35px
-	&::before
-		content: ''
-		position: absolute
-		left: 10px
-		top: 8px
-		width: 12px
-		height: 17px
-		background-position: 50% 50%
-		background-size: contain
-		background-repeat: no-repeat
-	&_file
-		&::before
-			background-image: url('../img/icon__file.jpg')
-	&:not(:last-child)
-		margin-bottom: 15px
+  position: relative
+  // max-width: 230px
+  input,
+  select,
+  textarea
+    width: 100%
+    padding-left: 40px
+    background-color: $tr
+    // &:focus + .input__wrp-placeholder
+    //  top: -5px
+    //  left: 30px
+    //  transform: translateY(0) scale(.7)
+    //  opacity: .7
+  &::before
+    content: ''
+    position: absolute
+    left: 15px
+    top: 50%
+    transform: translateY(-50%)
+    width: 12px
+    height: 17px
+    background-position: 50% 50%
+    background-size: contain
+    background-repeat: no-repeat
+  // &-placeholder
+  //  position: absolute
+  //  left: 40px
+  //  top: 50%
+  //  transform: translateY(-50%)
+  //  transition: .4s all ease
+  //&_name
+  //  &::before
+  //    background-image: url('../img/icon__form-name.svg')
+  //&_mail
+  //  &::before
+  //    background-image: url('../img/icon__form-mail.svg')
+  //&_tel
+  //  &::before
+  //    background-image: url('../img/icon__form-tel.svg')
+  //&_text
+  //  &::before
+  //    top: 14px
+  //    transform: translateY(0)
+  //    background-image: url('../img/icon__form-mes.svg')
++rmin(1200)
+  .container
+    width: calc(994px + 30px)
+.img-fluid
+  max-width: 100%
+  height: auto
+.red
+  color: $red
+.wt
+  color: #fff
+a.wt
+  color: #fff !important
+  &:hover
+    color: $lred !important
+.black
+  color: #000
+.bold
+  font-family: $r-bold, sans-serif !important
+.med
+  font-family: $r-med !important
+.reg
+  font-family: $r-reg !important
+.fz13
+  font-size: 13px
+  +r(1200)
+    font-size: 12px
+.fz14
+  font-size: 14px
+  +r(1200)
+    font-size: 13px
+.fz16
+  font-size: 16px
+  +r(1200)
+    font-size: 14px
+.fz18
+  font-size: 18px
+  +r(1200)
+    font-size: 16px
+.fz20
+  font-size: 20px
+  +r(1200)
+    font-size: 17px
+.fz30
+  font-size: 30px
+  +r(1200)
+    font-size: 20px
+.tac
+  text-align: center
+.tal
+  text-align: left !important
+.tar
+  text-align: right
+.und
+  text-decoration: underline
+.dash
+  text-decoration: underline
+  text-decoration-style: dashed
+.upp
+  text-transform: uppercase
+.ttn
+  text-transform: none !important
+.link_dec
+  color: #0063BE
+  text-decoration: underline
+  line-height: 1.1
+.btn
+  position: relative
+  font-size: 15px
+  font-family: $r-bold
+  letter-spacing: .5px
+  text-align: center
+  display: inline-block
+  padding: 12px 20px
+  +ease
+  color: #fff
+  background: linear-gradient(180deg, #EA3838 0%, #D60000 100%)
+  border-radius: 5px
+  border: none
+  outline: none
+  &:hover
+    color: $dark
+.quantity
+  position: relative
+  min-width: 100px
+  max-width: 120px
+  width: 100px
+  input
+    background-color: $tr
+    width: 100%
+    border-color: $gr
+    &:focus
+      border-color: $lred
+  &-num
+    text-align: center
+  &-minus,
+  &-plus
+    position: absolute
+    height: 50%
+    top: 50%
+    transform: translate(0,-50%)
+    font-family: $r-reg
+    font-size: 24px
+    line-height: 0
+    border: none
+    display: flex
+    justify-content: center
+    border-radius: 50%
+    align-items: center
+    &:hover
+      opacity: .7
+  &-minus
+    left: 5px
+    color: $red
+  &-plus
+    right: 5px
+    color: #3498DB
+.tabs
+  // &__content-item
+  //   // display: none
+  //   transition: unset
+  &__list
+    list-style-type: none
+    padding: 0
+    margin: 0
+  &-acc
+    &__btn
+      display: none
+      width: 100%
+      padding: 12px 25px
+      background-color: #E0E0E0
+      font-weight: bold
+      text-align: center
+      cursor: pointer
+      border: 1px solid #fff
+      &.active
+        background-color: #ccc
+        color: #fff
+    &__cnt
+      transition: unset
+.upload__file
+  width: 0.1px
+  height: 0.1px
+  opacity: 0
+  overflow: hidden
+  position: absolute
+  z-index: -1
+  &-wrp
+    cursor: pointer
+    label.filename
+      cursor: pointer
+      margin-bottom: 0
+      cursor: pointer
+.checkbox
+  cursor: pointer
+  position: relative
+  margin-bottom: 0
+  input[type="checkbox"],
+  input[type="radio"]
+    position: absolute
+    z-index: 1
+    opacity: 0
+    width: 100%
+    height: 20px
+    cursor: pointer
+  .checkbox__text
+    font-size: 14px
+    position: relative
+    padding-left: 30px
+    cursor: pointer
+    width: 100%
+    height: 30px
+    display: block
+    +r(1200)
+      font-size: 12px
+    &::before
+      content: ''
+      position: absolute
+      top: 0px
+      left: -2px
+      width: 20px
+      height: 20px
+      border-radius: 2px
+      border: 1px solid #c3c2c2
+      background: #fff
+    &::after
+      content: ''
+      position: absolute
+      top: 50%
+      margin-top: -11px
+      left: 2px
+      width: 12px
+      height: 12px
+      background-color: $red
+      border-radius: 2px
+      opacity: 0
+      transform: scale(0)
+      transition: 0.2s
+    a
+      color: $red
+      text-decoration: underline
+      position: relative
+      z-index: 2
+  input[type="checkbox"]:checked + .checkbox__text:after,
+  input[type="radio"]:checked + .checkbox__text:after
+    opacity: 1
+    transform: scale(1)
+  input[type="checkbox"]:checked + .checkbox__text:before,
+  input[type="radio"]:checked + .checkbox__text:before
+    background-color: #fff
+.img-fluid
+  max-width: 100%
+  height: auto
+.list
+  &_circle
+    list-style-type: none
+    padding-left: 0
+    li
+      padding-left: 25px
+      position: relative
+      &
+        margin-bottom: 10px
+      &::before
+        content: ''
+        position: absolute
+        width: 8px
+        height: 8px
+        background-color: $red
+        left: 0
+        top: 4px
+        border-radius: 50%
+  &_string
+    list-style-type: none
+    padding-left: 0
+    li
+      padding-left: 25px
+      position: relative
+      &
+        margin-bottom: 10px
+      &::before
+        content: ''
+        position: absolute
+        width: 12px
+        height: 1px
+        background-color: $red
+        left: 0
+        top: 6px
+  &_num
+    padding-left: 0
+    counter-reset: list1
+    li
+      list-style-type: none
+      &
+        margin-bottom: 10px
+      &::before
+        counter-increment: list1
+        content: counter(list1)
+        color: $red
+        font-size: 16px
+        font-family: $r-bold
+        margin-right: 15px
+.fancybox-slide--html
+  padding: 0
+.popup__container
+  padding: 43px 15px 0
+  background-color: transparent
+  +r(1200)
+    padding-left: 0
+    padding-right: 0
+  .fancybox-close-small
+    top: 0
+    right: 2px
+    padding: 0
+    svg
+      path
+        fill: #fff
+  .popup__wrp
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: center
+    position: relative
+    max-width: 770px
+  .popup
+    width: 100%
+    height: 100%
+    position: relative
+    z-index: 2
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+    background-color: #fff
+    color: $dark
+    padding: 30px 25px 30px
+    text-align: center
+    overflow: hidden
+    .section__ttl
+      line-height: 1
+    .checkbox
+      text-align: left
+      max-width: 410px
+    &__captcha
+      width: 270px
+      height: 72px
+      +cv
+      background-image: url('../img/captcha.jpg')
+    &_call
+      &__wrp
+        max-width: 570px
+        .btn
+          max-width: 370px
+          width: 100%
+      &__col
+        max-width: 370px
+        width: 100%
+    &_succ
+      &__wrp
+        max-width: 770px
+        .popup
+          min-height: 320px
+          min-width: 700px
+          justify-content: center
+          +r(1200)
+            min-width: unset
+            min-height: 180px
+        span
+          color: #27AE60
+    &_coop
+      &__wrp
+        max-width: 970px
+        .btn
+          width: 264px
+    &_order
+      &__wrp
+        max-width: 570px
+        .btn
+          width: 100%
+          padding-left: 8px
+          padding-right: 8px
+.slick
+  background: none !important
+  &-prev,
+  &-next
+    +ease
+    &::before
+      display: none
+    svg
+      fill: none
+      stroke: $dark
+      +ease
+    &:hover
+      svg
+        stroke: $red
+    &.slick-disabled
+      visibility: hidden
+      opacity: 0
+.owl-carousel
+  .owl-item
+    img
+      width: auto !important
+  .owl-dots
+    position: absolute
+    width: 100%
+    display: flex
+    justify-content: center
+    bottom: 20px
+    counter-reset: list1
+    button.owl-dot
+      color: #000
+      width: 18px
+      height: 18px
+      border: 1px solid #5E5E5E
+      border-radius: 50%
+      background: linear-gradient(180deg, #FFFFFF 0%, #A0A1A3 100%)
+      position: relative
+      &::before
+        position: absolute
+        left: 5px
+        top: 50%
+        font-size: 12px
+        font-family: $r-reg
+        line-height: 1
+        transform: translateY(-50%)
+        counter-increment: list1
+        content: counter(list1)
+      +r(1200)
+        width: 15px
+        height: 15px
+      &:not(:last-child)
+        margin-right: 8px
+      &.active
+        border-color: $dark
+        background: linear-gradient(180deg, #A0A1A3 0%, #FFFFFF 100%)
+  .owl-nav
+    button.owl-prev,
+    button.owl-next
+      width: 24px
+      height: 24px
+      position: absolute
+      top: 50%
+      border-radius: 50%
+      padding: 0
+      border: 1px solid #9E9E9E
+      background-color: #fff
+      display: flex
+      justify-content: center
+      align-items: center
+      +ease
+      transform: translateY(-50%)
+        +ease
+      +r(1200)
+        width: 18px
+        height: 18px
+      svg
+        max-width: 17px
+        max-height: 17px
+        height: auto
+        fill: none
+        stroke: #9E9E9E
+        +ease
+        +r(1200)
+          max-height: 12px
+    button.owl-prev:hover,
+    button.owl-next:hover
+      border-color: $red
+      background-color: $red
+      svg
+        stroke: #fff
+    button.owl-prev.disabled,
+    button.owl-next.disabled,
+    button.owl-prev.disabled:hover,
+    button.owl-next.disabled:hover
+      opacity: 0
+      cursor: default
+    button.owl-prev
+      left: calc(-24px/2)
+      +r(1200)
+        left: 5px
+    button.owl-next
+      right: calc(-24px/2)
+      +r(1200)
+        right: 5px
+.section
+  &_inner
+    padding: 25px 0
+    //+r(1200)
+    //  padding: 35px 0
+  &__ttl
+    font-size: 25px
+    font-family: $r-bold
+    letter-spacing: 1px
+    margin-bottom: 20px
+    //+r(1200)
+    //  font-size: 22px
+    //  margin-bottom: 25px
+  &__subttl
+    font-size: 20px
+    font-family: $r-bold
+    letter-spacing: 1px
+    margin-bottom: 20px
+.header
+  &__top
+    padding: 15px 0
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1)
+    &-link
+      font-size: 13px
+      text-decoration: underline
+      text-decoration-style: dotted
+      &:not(:last-child)
+        margin-right: 30px
+  &__bot
+    padding: 10px 0 15px
+    &-col
+      width: 274px
+      &:last-child
+        width: 214px
+  &__logo
+    background-color: $red
+    color: #fff
+    border-radius: 3px
+    width: 189px
+    height: 94px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding: 10px 20px
+    +ease
+    span
+      &:nth-child(1)
+        font-size: 30px
+        font-family: $r-black
+        text-transform: uppercase
+        line-height: 1.2
+      &:nth-child(2)
+        font-size: 13px
+        font-family: $r-bold
+    &:hover
+      color: #fff
+      background-color: $lred
+  &__title
+    font-size: 17px
+    font-family: $r-bold
+  &__tel
+    font-size: 19px
+    font-family: $r-bold
+    color: $red
+    line-height: 1.1;
+    &:nth-child(2)
+      margin-bottom: 5px
+  &__popup-btn
+    padding: 0
+    text-decoration: underline
+    text-decoration-style: dashed
+    margin-top: 5px
+  &__cont
+    svg
+      min-width: 11px
+      margin-right: 18px
+      margin-top: 5px
+    &:nth-child(1)
+      margin-bottom: 11px
+.navbar
+  background-color: $gr
+  border-top: 1px solid $dgr
+  border-bottom: 1px solid $dgr
+  padding: 8px 0
+.main
+  &-nav
+    position: relative
+    &__btn
+      font-size: 18px
+      color: #fff
+      background: linear-gradient(180deg, #939393 0%, #686868 100%)
+      border-radius: 5px
+      padding: 12px 15px 12px 20px
+      cursor: pointer
+      span
+        margin-left: 12px
+    &__list
+      position: absolute
+      width: 100%
+      left: 0
+      background: #FFFFFF
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+      border-bottom-left-radius: 5px
+      border-bottom-right-radius: 5px
+      padding: 2px
+      z-index: 2
+    &__link
+      position: relative
+      padding: 12px 15px 12px 18px
+      font-family: $r-bold
+      color: $ldark
+      &-icon
+        width: 20px
+        text-align: center
+      span
+        margin-left: 10px
+      &-arr
+        position: absolute
+        right: 12px
+        top: 50%
+        transform: translateY(-50%)
+        svg
+          fill: none
+          stroke: #818181
+          +ease
+      &:not(:last-child)
+        border-bottom: 1px solid #CCCCCC
+      &:hover
+        svg
+          stroke: $red
+  &-search
+    display: flex
+    &__query
+      font-size: 15px
+      padding: 8px 25px
+      width: 100%
+      color: #666666
+      border: 1px solid #9E9E9E
+      border-top-right-radius: 0
+      border-bottom-right-radius: 0
+      &::placeholder
+        color: #666666 !important
+    &__btn
+      background: linear-gradient(180deg, #939393 0%, #686868 100%)
+      min-width: 33px
+      min-height: 33px
+      display: flex
+      align-items: center
+      border-top-right-radius: 3px
+      border-bottom-right-radius: 3px
+      svg
+        +ease
+        fill: #fff
+      &:hover
+        svg
+          fill: $dark
+  &-slider
+    &__item
+      +cv
+      width: 100%
+      height: 270px
+      border-radius: 5px
+      display: flex
+      align-items: center
+      padding-left: 60px
+    &-ttl
+      font-size: 36px
+      font-family: $r-bold
+      line-height: 1.1;
+      color: #fff
+.content
+  padding: 30px 0
+  &__col
+    &_left
+      width: 216px
+      margin-right: 15px
+    &_right
+      width: 762px
+.ware
+  &__in
+    padding: 10px 15px
+    border: 1px solid #CDCDCD
+    border-radius: 5px
+  &__item
+    border: 1px solid #CDCDCD
+    border-radius: 5px
+    padding: 20px 10px
+    &-img
+      position: relative
+      width: 100%
+      height: 124px
+      margin-bottom: 32px
+      margin-top: 10px
+      +ct
+      &::after
+        position: absolute
+        content: ''
+        width: 100%
+        height: 1px
+        background-color: #9E9E9E
+        opacity: .5
+        bottom: -16px
+    &-ttl
+      //font-size: 15px
+      text-decoration: underline
+      margin-bottom: 16px
+      display: block
+    &-price
+      margin-bottom: 16px
+      span:nth-child(1)
+        font-size: 18px
+        font-family: $r-bold
+    .btn
+      width: 100%
+.test
+  &__item
+    display: flex
+    color: $ldark
+    &-icon
+      width: 40px
+      margin-right: 26px
+    &-ttl
+      font-size: 20px
+      font-family: $r-bold
+      margin-bottom: 10px
+.sup
+  padding: 10px 10px 20px
+  border: 1px solid #D7D8D9
+  border-radius: 5px
+  &__item
+    min-height: 44px
+    display: flex
+    align-items: center
+    img
+      max-width: 95px
+      max-height: 46px
+    &:not(:last-child)
+      margin-bottom: 14px
+  .owl-nav
+    button.owl
+      &-next
+        right: -25px
+      &-prev
+        left: -25px
+.cus
+  padding: 10px 10px 20px
+  border: 1px solid #D7D8D9
+  border-radius: 5px
+  height: 100%
+.news
+  &__list
+    &-item
+      display: flex
+      align-items: flex-start
+      margin-bottom: 30px
+      &:hover
+        opacity: .7
+      &-img
+        width: 74px
+        min-width: 74px
+        height: 50px
+        border: 1px solid #C0C0C0
+        border-radius: 4px
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-right: 10px
+      &-ttl
+        margin-top: 4px
+        margin-bottom: 10px
+      &-descr
+        color: #3A3A3A
+        line-height: 1.1
+.serv
+  padding: 10px
+  border: 1px solid #D7D8D9
+  border-radius: 5px
+  &__item
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+    color: #fff
+    margin: 5px
+    height: 160px
+    padding: 7px
+    border-radius: 5px
+    +cv
+    overflow:hidden
+    &-wrp
+      margin-bottom: 10px
+    &:hover
+      color: #fff
+      &::before
+        background-color: $red
+    &>*
+      position: relative
+    &-descr
+      font-size: 12px
+      margin-bottom: 5px
+    &::before
+      +ovl
+      background-color: #000
+      opacity: .7
+      +ease

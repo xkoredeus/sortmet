@@ -2,9 +2,9 @@ var gulp       = require('gulp'), // Подключаем Gulp
 	sass         = require('gulp-sass'), //Подключаем Sass пакет,
 	browserSync  = require('browser-sync'), // Подключаем Browser Sync
 	concat       = require('gulp-concat'), // Подключаем gulp-concat (для конкатенации файлов)
-	uglify       = require('gulp-uglifyjs'), // Подключаем gulp-uglifyjs (для сжатия JS)
+	// uglify       = require('gulp-uglifyjs'), // Подключаем gulp-uglifyjs (для сжатия JS)
 	cssnano      = require('gulp-cssnano'), // Подключаем пакет для минификации CSS
-	rename       = require('gulp-rename'), // Подключаем библиотеку для переименования файлов
+	// rename       = require('gulp-rename'), // Подключаем библиотеку для переименования файлов
 	del          = require('del'), // Подключаем библиотеку для удаления файлов и папок
 	imagemin     = require('gulp-imagemin'), // Подключаем библиотеку для работы с изображениями
 	pngquant     = require('imagemin-pngquant'), // Подключаем библиотеку для работы с png
@@ -36,8 +36,6 @@ gulp.task('scripts', function() {
 		])
 		.pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
 		// .pipe(uglify()) // Сжимаем JS файл
-		.pipe(plumber())
-		.pipe(coffee())
 		.pipe(gulp.dest('app/js')); // Выгружаем в папку app/js
 });
 
