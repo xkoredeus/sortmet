@@ -97,7 +97,7 @@ select {
   padding: 12px 25px;
   border-radius: 3px;
   border: none;
-  border: 1px solid #1A1A1A;
+  border: 1px solid #9E9E9E;
   -webkit-transition: all .4s ease;
   -o-transition: all .4s ease;
   transition: all .4s ease;
@@ -328,9 +328,6 @@ a.wt:hover {
   text-align: center;
   display: inline-block;
   padding: 12px 20px;
-  -webkit-transition: .3s all ease;
-  -o-transition: .3s all ease;
-  transition: .3s all ease;
   color: #fff;
   background: -webkit-gradient(linear, left top, left bottom, from(#EA3838), to(#D60000));
   background: -o-linear-gradient(top, #EA3838 0%, #D60000 100%);
@@ -341,7 +338,10 @@ a.wt:hover {
 }
 
 .btn:hover {
-  color: #1A1A1A;
+  color: #fff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#D60000), to(#D60000));
+  background: -o-linear-gradient(top, #D60000 0%, #D60000 100%);
+  background: linear-gradient(180deg, #D60000 0%, #D60000 100%);
 }
 
 .btn--tr {
@@ -351,6 +351,11 @@ a.wt:hover {
   background: linear-gradient(180deg, #FFFFFF 0%, #E4E2E2 111.11%);
   border: 1px solid #B6B4B4;
   border-radius: 5px;
+}
+
+.btn--tr:hover {
+  color: #737171;
+  background: #E4E2E2;
 }
 
 .quantity {
@@ -1343,6 +1348,9 @@ a.wt:hover {
   border: 1px solid #CDCDCD;
   border-radius: 5px;
   padding: 20px 10px;
+  max-width: 184px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .ware__item-img {
@@ -1747,6 +1755,7 @@ a.wt:hover {
 }
 
 .card__right {
+  font-size: 13px;
   width: 266px;
 }
 
@@ -1846,7 +1855,7 @@ a.wt:hover {
   z-index: 1;
 }
 
-.card__tabs .tabs__list li {
+.card__tabs .tabs__list > div {
   padding: 10px 15px;
   background-color: #F4F4F4;
   border: 1px solid #CBCCCE;
@@ -1861,7 +1870,7 @@ a.wt:hover {
   transition: .3s all ease;
 }
 
-.card__tabs .tabs__list li.active {
+.card__tabs .tabs__list > div.active {
   color: #D60000;
   background-color: #fff;
   border-bottom: #fff;
@@ -1884,4 +1893,40 @@ a.wt:hover {
 
 .card__table td:last-child {
   text-align: right;
+}
+
+.more__in {
+  padding: 10px 15px;
+  border: 1px solid #CDCDCD;
+  border-radius: 5px;
+}
+
+.more__tabs .tabs__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.more__tabs .tabs__list > div {
+  margin-right: 10px;
+  text-decoration: underline;
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
+  cursor: pointer;
+}
+
+.more__tabs .tabs__list > div.active {
+  color: #D60000;
+}
+
+.feed {
+  padding: 18px 0;
+  background: #E9E9E9;
+  border: 1px solid #D1D2D3;
 }
