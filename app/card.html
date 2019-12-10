@@ -77,7 +77,7 @@
 								<span>Каталог товаров</span>
 							</div>
 						</div>
-						<div class="main-nav__list">
+						<div class="main-nav__list" style="display: none;">
 							<div class="d-flex flex-column">
 								<a class="main-nav__link" href="#">
 									<div class="d-flex align-items-center">
@@ -190,321 +190,171 @@
 	</div>
 	<div class="content">
 		<div class="container">
-			<div class="d-flex d-flex flex-wrap flex-xl-nowrap">
-				<aside class="content__col_left">
-					<div class="main-aside__offset"></div>
-					<div class="main-aside__item">
-						<img src="img/aside__img_1.jpg" class="img-fluid" alt="aside__img_1.jpg">
+			<ul class="crumbs">
+				<li>
+					<a href="#">Главная</a>
+				</li>
+				<li>
+					<a href="#">Каталог</a>
+				</li>
+				<li>
+					<a href="#">Сортовой прокат</a>
+				</li>
+				<li>
+					<a href="#">Арматура</a>
+				</li>
+				<li>
+					<a href="#">Арматура гладкая А1</a>
+				</li>
+				<li>
+					<span>Арматура 6 А1</span>
+				</li>
+			</ul>
+			<div class="section__ttl mb-2 mb-3">Арматура 6 А1, длина - 6000мм</div>
+			<div class="fz13">Артикул: <span class="red">1234567</span></div>
+			<div class="card__top d-flex d-flex flex-wrap flex-xl-nowrap mb-5">
+				<div class="card__left">
+					<div class="card__img">
+						<img src="img/card__img.jpg" alt="card__img.jpg" class="img-fluid">
 					</div>
-					<div class="main-aside__item">
-						<img src="img/aside__img_2.jpg" class="img-fluid" alt="aside__img_2.jpg">
-					</div>
-					<div class="main-aside__news">
-						<div class="section__subttl">Полезные статьи</div>
-						<div class="main-aside__news-item">
-							<a href="#" class="main-aside__news-link">ВсеИнструменты.ру – магазин для вас!</a>
+					<div class="card__test d-flex justify-content-between align-items-center">
+						<div class="card__test-item">
+							<img src="img/card__test_1.svg" alt="card__test_1.svg">
+							<span class="ml-1 fz13 bold">Доставка день в день</span>
 						</div>
-						<div class="main-aside__news-item">
-							<a href="#" class="main-aside__news-link">Характеристики инструмента и их значение</a>
-							<div class="main-aside__news-descr">Каждый электроинструмент имеет свои производственные характеристики. Человеку, который в них разбирается, достаточно прочитать две-три строчи, чтобы получить представление о том, для каких задач предназначена та или иная модель.</div>
+						<div class="card__test-item">
+							<img src="img/card__test_2.svg" alt="card__test_2.svg">
+							<span class="ml-1 fz13 bold">Доставляем по всей РФ</span>
 						</div>
-						<div class="main-aside__news-item">
-							<a href="#" class="main-aside__news-link">Как правильно выбрать электроинструмент?</a>
-							<div class="main-aside__news-descr">Залог удачной покупки — продумать все до мелочей. Мы предлагаем бытовые и профессиональные электроинструменты, а также подробные инструкции о том, что предпочесть.</div>
+						<div class="card__test-item">
+							<img src="img/card__test_3.svg" alt="card__test_3.svg">
+							<span class="ml-1 fz13 bold">Оплата на объекте</span>
 						</div>
-						<div class="main-aside__news-item">
-							<a href="#" class="main-aside__news-link">Современные производители электроинструментов</a>
-						</div>
-						<div class="main-aside__news-item">
-							<a href="#" class="main-aside__news-link">Устройство и принцип работы электроинструмента</a>
-						</div>
-						<div class="main-aside__news-item">
-							<a href="#" class="main-aside__news-link">Электроинструменты для сада и их назначение</a>
-						</div>
-						<div class="main-aside__news-item">
-							<a href="#" class="main-aside__news-link">Техника безопасности при работе с инструментом</a>
-						</div>
-						<a class="d-flex align-items-center" href="#">
-							<img alt="link__arr.svg" src="img/link__arr.svg" class="mt-1">
-							<span class="link_dec ml-2 fz12">все статьи</span>
-						</a>
-					</div>
-				</aside>
-				<div class="content__col_right">
-					<div class="main-slider owl-carousel">
-						<div class="main-slider__item" style="background-image: url(img/main-slider__img_1.jpg);">
-							<div class="main-slider-ttl">Возможна <br>оплата <br>на объекте</div>
-						</div>
-						<div class="main-slider__item" style="background-image: url(img/main-slider__img_1.jpg);">
-							<div class="main-slider-ttl">Возможна <br>оплата <br>на объекте</div>
-						</div>
-						<div class="main-slider__item" style="background-image: url(img/main-slider__img_1.jpg);">
-							<div class="main-slider-ttl">Возможна <br>оплата <br>на объекте</div>
+						<div class="card__test-item">
+							<img src="img/card__test_4.svg" alt="card__test_4.svg">
+							<span class="ml-1 fz13 bold">Отсрочка платежа</span>
 						</div>
 					</div>
-					<section class="section_inner pb-0">
-						<div class="section__subttl">Мы продаем</div>
-						<div class="ware">
-							<div class="ware__in owl-carousel">
-								<form class="ware__item">
-									<div>Артикул: <span class="red">1234567</span></div>
-									<div class="ware__item-img" style="background-image: url(img/ware__img_1.jpg);"></div>
-									<a class="ware__item-ttl" href="#">Трубы нерж. бесшовные 20х2</a>
-									<div class="ware__item-price">
-										<span>810 930</span>&nbsp;р./тн
-									</div>
-									<button class="btn" type="submit">Заказать</button>
-								</form>
-								<form class="ware__item">
-									<div>Артикул: <span class="red">1234567</span></div>
-									<div class="ware__item-img" style="background-image: url(img/ware__img_2.jpg);"></div>
-									<a class="ware__item-ttl" href="#">Трубы нерж. эсв имп зерк , длина - 6000мм</a>
-									<div class="ware__item-price">
-										<span>810 930</span>&nbsp;р./тн
-									</div>
-									<button class="btn" type="submit">Заказать</button>
-								</form>
-								<form class="ware__item">
-									<div>Артикул: <span class="red">1234567</span></div>
-									<div class="ware__item-img" style="background-image: url(img/ware__img_3.jpg);"></div>
-									<a class="ware__item-ttl" href="#">Трубы х/д 48х10, длина - 12000мм</a>
-									<div class="ware__item-price">
-										<span>134 490</span>&nbsp;р./тн
-									</div>
-									<button class="btn" type="submit">Заказать</button>
-								</form>
-								<form class="ware__item">
-									<div>Артикул: <span class="red">1234567</span></div>
-									<div class="ware__item-img" style="background-image: url(img/ware__img_4.jpg);"></div>
-									<a class="ware__item-ttl" href="#">Лист медный  10x600x1500 мяг</a>
-									<div class="ware__item-price">
-										<span>581 000</span>&nbsp;р./тн
-									</div>
-									<button class="btn" type="submit">Заказать</button>
-								</form>
-								<form class="ware__item">
-									<div>Артикул: <span class="red">1234567</span></div>
-									<div class="ware__item-img" style="background-image: url(img/ware__img_1.jpg);"></div>
-									<a class="ware__item-ttl" href="#">Трубы нерж. бесшовные 20х2</a>
-									<div class="ware__item-price">
-										<span>810 930</span>&nbsp;р./тн
-									</div>
-									<button class="btn" type="submit">Заказать</button>
-								</form>
-							</div>
+				</div>
+				<div class="card__right">
+					<div class="card__price-wrp mb-3">
+						<div class="card__price-ttl">Цена за тонну</div>
+						<div class="card__price-val">
+							<span>72 200</span>&nbsp;р.
 						</div>
-					</section>
-					<section class="section_inner pb-0">
-						<div class="section__ttl">5 лет на рынке металлопроката</div>
-						<div class="row">
-							<div class="col-sm-6 mb-3 mb-xl-4">
-								<div class="test__item">
-									<div class="test__item-icon">
-										<img alt="test__img_1.svg" src="img/test__img_1.svg">
-									</div>
-									<div class="d-flex flex-column">
-										<div class="test__item-ttl">Доставка день в день</div>
-										<div class="test__item-descr">Доставка в день обращения, если заказ был
-											осуществле до обеда
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 mb-3 mb-xl-4">
-								<div class="test__item">
-									<div class="test__item-icon">
-										<img alt="test__img_2.svg" src="img/test__img_2.svg">
-									</div>
-									<div class="d-flex flex-column">
-										<div class="test__item-ttl">Доставляем по всей РФ</div>
-										<div class="test__item-descr">Доствим в любой город РФ своим транспортом или транспортной компанией</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 mb-3">
-								<div class="test__item">
-									<div class="test__item-icon">
-										<img alt="test__img_3.svg" src="img/test__img_3.svg">
-									</div>
-									<div class="d-flex flex-column">
-										<div class="test__item-ttl">Оплата на объекте</div>
-										<div class="test__item-descr">Возможна оплата на объекте после того как приехал транспорт</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-6 mb-3">
-								<div class="test__item">
-									<div class="test__item-icon">
-										<img alt="test__img_4.svg" src="img/test__img_4.svg">
-									</div>
-									<div class="d-flex flex-column">
-										<div class="test__item-ttl">Отсрочка платежа</div>
-										<div class="test__item-descr">Постоянным клиентам готовы предоставить отсрочку платежа</div>
-									</div>
-								</div>
-							</div>
+						<button class="btn w-100">Заказать</button>
+						<button class="btn btn--tr w-100">Купить в один клик</button>
+					</div>
+					<div class="card__flag-list d-flex flex-wrap align-items-center">
+						<div class="card__flag card__flag--avail">В наличии</div>
+						<span>Доставка завтра</span>
+					</div>
+					<div class="card__line mt-2 mt-xl-3 mb-2 mb-xl-3"></div>
+					<div class="fz13 mb-3 lgr">ГОСТы и ТУ</div>
+					<div class="d-flex flex-column">
+						<a href="#" class="und mb-1">-&nbsp;<span>ГОСТ 19425-74</span></a>
+						<a href="#" class="und mb-1">-&nbsp;<span>ГОСТ 535-8 8</span></a>
+						<a href="#" class="und mb-1">-&nbsp;<span>ГОСТ 26020-83</span></a>
+						<a href="#" class="und mb-1">-&nbsp;<span>ГОСТ 8239-89</span></a>
+					</div>
+					<div class="card__line mt-2 mt-xl-3 mb-2 mb-xl-3"></div>
+					<div class="fz13 mb-3 lgr">Дополнительные услуги по этому товару:</div>
+					<div class="d-flex flex-wrap justify-content-between align-items-center">
+						<div class="card__serv-item mb-4">
+							<img src="img/card__serv-img_1.svg" alt="card__serv-img_1.svg">
+							<span class="ml-2">Резка в размер</span>
 						</div>
-					</section>
-					<section class="section_inner pb-0">
-						<div class="row">
-							<div class="col-xl-6">
-								<div class="sup">
-									<div class="section__subttl">Наши поставщики</div>
-									<div class="px-3">
-										<div class="sup__in owl-carousel mb-3">
-											<div class="sup__col d-flex flex-column align-items-center">
-												<div class="sup__item">
-													<img alt="sup__img_1.png" src="img/sup__img_1.png">
-												</div>
-												<div class="sup__item">
-													<img alt="sup__img_2.png" src="img/sup__img_2.png">
-												</div>
-												<div class="sup__item">
-													<img alt="sup__img_3.png" src="img/sup__img_3.png">
-												</div>
-											</div>
-											<div class="sup__col d-flex flex-column align-items-center">
-												<div class="sup__item">
-													<img alt="sup__img_4.png" src="img/sup__img_4.png">
-												</div>
-												<div class="sup__item">
-													<img alt="sup__img_5.png" src="img/sup__img_5.png">
-												</div>
-												<div class="sup__item">
-													<img alt="sup__img_6.png" src="img/sup__img_6.png">
-												</div>
-											</div>
-											<div class="sup__col d-flex flex-column align-items-center">
-												<div class="sup__item">
-													<img alt="sup__img_7.png" src="img/sup__img_7.png">
-												</div>
-												<div class="sup__item">
-													<img alt="sup__img_8.png" src="img/sup__img_8.png">
-												</div>
-												<div class="sup__item">
-													<img alt="sup__img_9.png" src="img/sup__img_9.png">
-												</div>
-											</div>
-											<div class="sup__col d-flex flex-column align-items-center">
-												<div class="sup__item">
-													<img alt="sup__img_1.png" src="img/sup__img_1.png">
-												</div>
-												<div class="sup__item">
-													<img alt="sup__img_2.png" src="img/sup__img_2.png">
-												</div>
-												<div class="sup__item">
-													<img alt="sup__img_3.png" src="img/sup__img_3.png">
-												</div>
-											</div>
-										</div>
-										<a class="d-flex align-items-center" href="#">
-											<img alt="link__arr.svg" src="img/link__arr.svg" class="mt-1">
-											<span class="link_dec ml-2">все поставщики</span>
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="col-xl-6">
-								<div class="cus">
-									<div class="section__subttl">У нас покупают</div>
-									<img alt="cus__img.jpg" class="d-block mx-auto mt-3 mt-xl-4" src="img/cus__img.jpg">
-								</div>
-							</div>
+						<div class="card__serv-item mb-4">
+							<img src="img/card__serv-img_2.svg" alt="card__serv-img_2.svg">
+							<span class="ml-2">Нарезка резьбы</span>
 						</div>
-					</section>
-					<section class="section_inner pb-0">
-						<div class="row">
-							<div class="col-xl-6">
-								<div class="section__subttl">Наши новости</div>
-								<div class="news__list">
-									<a href="#" class="news__list-item">
-										<div class="news__list-item-img">
-											<img alt="news__list-img_1.jpg" class="img-fluid" src="img/news__list-img_1.jpg">
-										</div>
-										<div class="d-flex flex-column">
-											<div class="news__list-item-ttl link_dec">Сервисные центры партнеров
-												<br>СОРТМЕТ.ру</div>
-											<div class="news__list-item-descr">Хотите сдать инструмент для обслуживания и ремонта в своем городе? Вам не придется долго ждать, пока его доставят в Москву в наш сервисный центр. Мы сотрудничаем с надежными партнерами в регионах, для которых обслуживание клиентов СОРТМЕТ.ру в приоритете. Обращайтесь!</div>
-										</div>
-									</a>
-									<a href="#" class="news__list-item">
-										<div class="news__list-item-img">
-											<img alt="news__list-img_2.jpg" class="img-fluid" src="img/news__list-img_2.jpg">
-										</div>
-										<div class="d-flex flex-column">
-											<div class="news__list-item-ttl link_dec">Порядок бережет время! Системы хранения + подарки от STANLEY</div>
-											<div class="news__list-item-descr">Что определяет срок службы инструментов? Бережное отношение во всем: начиная от содержания их в чистом виде и заканчивая грамотным хранением и переноской. Многие мастера уже давно пользуются ящиками, рюкзаками и сумками STANLEY и оценивают их по достоинству. Хотите узнать больше о системах хранения? А подарки получить хотите? Поможем с выбором и раскроем подробности акции!</div>
-										</div>
-									</a>
-									<a href="#" class="news__list-item">
-										<div class="news__list-item-img">
-											<img alt="news__list-img_3.jpg" class="img-fluid" src="img/news__list-img_3.jpg">
-										</div>
-										<div class="d-flex flex-column">
-											<div class="news__list-item-ttl link_dec">И с проводом, и без провода: аккумуляторный паяльник Ryobi R18SOI</div>
-											<div class="news__list-item-descr">Паяльник Ryobi R18SOI работает на 18-вольтовой батарее линейки One+ и имеет полноценную долговременную мощность в 40 Вт. Его, разумеется, не хватит для ремонта прохудившегося ведра или текущего радиатора УАЗика, но вполне достаточно для выполнения большинства среднестатистических электромонтажных задач вдали от розетки.</div>
-										</div>
-									</a>
-								</div>
-
-								<a class="d-flex align-items-center" href="#">
-									<img alt="link__arr.svg" src="img/link__arr.svg" class="mt-1">
-									<span class="link_dec ml-2">все новости</span>
-								</a>
-							</div>
-							<div class="col-xl-6">
-								<div class="serv">
-									<div class="section__subttl">Наши Услуги</div>
-									<div class="row no-gutters">
-										<div class="col-xl-6 serv_item-wrp">
-											<a href="#" class="serv__item" style="background-image: url(img/serv__img_1.jpg);">
-												<span class="bold mb-2">Гибка металла</span>
-												<span class="serv__item-descr">Компания «СОРТАМЕНТ» предоставляет услуги гибки металлопроката</span>
-												<img src="img/link__arr.svg" alt="link__arr.svg" class="mt-auto">
-											</a>
-										</div>
-										<div class="col-xl-6 serv_item-wrp">
-											<a href="#" class="serv__item" style="background-image: url(img/serv__img_2.jpg);">
-												<span class="bold mb-2">Изготовление металлоконструкций</span>
-												<span class="serv__item-descr">Компания «СОРТАМЕНТ» занимается изготовлением металлоконструкций на заказ масштабов работ.</span>
-												<img src="img/link__arr.svg" alt="link__arr.svg" class="mt-auto">
-											</a>
-										</div>
-										<div class="col-xl-6 serv_item-wrp">
-											<a href="#" class="serv__item" style="background-image: url(img/serv__img_3.jpg);">
-												<span class="bold mb-2">Сварочные услуги</span>
-												<span class="serv__item-descr">Здесь будет тестовый текст, Здесь будет тестовый текст, Здесь будет тестовый текст, </span>
-												<img src="img/link__arr.svg" alt="link__arr.svg" class="mt-auto">
-											</a>
-										</div>
-										<div class="col-xl-6 serv_item-wrp">
-											<a href="#" class="serv__item" style="background-image: url(img/serv__img_4.jpg);">
-												<span class="bold mb-2">Резка металла</span>
-												<span class="serv__item-descr">Компания «СОРТАМЕНТ» предоставляет услуги резки и сварки металлопроката</span>
-												<img src="img/link__arr.svg" alt="link__arr.svg" class="mt-auto">
-											</a>
-										</div>
-										<div class="col-xl-6 serv_item-wrp">
-											<a href="#" class="serv__item" style="background-image: url(img/serv__img_5.jpg);">
-												<span class="bold mb-2">Рубка гильятиной</span>
-												<span class="serv__item-descr">Компания «СОРТАМЕНТ» выполняет рубку листового металлопроката на гильотине</span>
-												<img src="img/link__arr.svg" alt="link__arr.svg" class="mt-auto">
-											</a>
-										</div>
-										<div class="col-xl-6 serv_item-wrp">
-											<a href="#" class="serv__item" style="background-image: url(img/serv__img_6.jpg);">
-												<span class="bold mb-2">Покраска металла</span>
-												<span class="serv__item-descr">Здесь будет тестовый текст, Здесь будет тестовый текст, </span>
-												<img src="img/link__arr.svg" alt="link__arr.svg" class="mt-auto">
-											</a>
-										</div>
-									</div>
-								</div>
-							</div>
+						<div class="card__serv-item">
+							<img src="img/card__serv-img_3.svg" alt="card__serv-img_3.svg">
+							<span class="ml-2">Сварка</span>
 						</div>
-					</section>
+						<div class="card__serv-item">
+							<img src="img/card__serv-img_4.svg" alt="card__serv-img_4.svg">
+							<span class="ml-2">Гибка</span>
+						</div>
+					</div>
+					<div class="card__line mt-2 mt-xl-3 mb-2 mb-xl-3"></div>
+					<div class="fz13 mb-3 lgr">Расчет доставки</div>
+					<input type="text" placeholder="Вид доставки" class="card__input mb-2 w-100">
+					<input type="text" placeholder="5 км до МКАД" class="card__input mb-3 w-100">
+					<div class="d-flex justify-content-between fz13">
+						<span>Стоимость доставки</span>
+						<span class="bold">500&nbsp;р.</span>
+					</div>
 				</div>
 			</div>
+			<div class="card__tabs tabs">
+				<div class="tabs__list">
+					<li class="active">Описание</li>
+					<li>Характеристики</li>
+					<li>Порядок оплаты</li>
+					<li>ГОСТы и ТУ</li>
+				</div>
+				<div class="tabs__container">
+					<div class="tabs__content-item">
+						<div class="row">
+							<div class="col-xl-9">
+								<table class="card__table w-100 mb-4">
+									<tr>
+										<td style="width: 90%">Диаметер</td>
+										<td style="width: 10%">10</td>
+									</tr>
+									<tr>
+										<td style="width: 90%">Марка</td>
+										<td style="width: 10%">Ст 3</td>
+									</tr>
+									<tr>
+										<td style="width: 90%">Длина</td>
+										<td style="width: 10%">12 000</td>
+									</tr>
+									<tr>
+										<td style="width: 90%">Материал</td>
+										<td style="width: 10%">Сталь</td>
+									</tr>
+									<tr>
+										<td style="width: 90%">Номер профиля</td>
+										<td style="width: 10%">10</td>
+									</tr>
+									<tr>
+										<td style="width: 90%">Тип сечения</td>
+										<td style="width: 10%">Просто1</td>
+									</tr>
+									<tr>
+										<td style="width: 90%">Марка стали или сплава</td>
+										<td style="width: 10%">Ст 3</td>
+									</tr>
+									<tr>
+										<td style="width: 90%">Тип производсва</td>
+										<td style="width: 10%">Горячекатанный</td>
+									</tr>
+									<tr>
+										<td style="width: 90%">Вес полноно метра</td>
+										<td style="width: 10%">9,46 кг</td>
+									</tr>
+								</table>
+								<p>Двутавровая балка (двутавр) № 10 применяется для придания надежности и жесткости металлическим и строительным конструкциям, используется в строительстве в качестве несущих элементов при возведении перекрытий и опор, для армирования стволов шахт, в машиностроительной и автомобильной промышленности, вагоностроении в качестве швеллера.</p>
+
+								<p>Стальная балка двутавровая высотой 100 мм производится в соответствии с требованиями ГОСТ 8239-89, ГОСТ 19425-74 и ГОСТ 26020-83.</p>
+								<p>Для того, чтобы купить балку двутавровую № 10 добавьте товар «В корзину» или нажмите на кнопку «Купить в 1 клик» для быстрого оформления заказа. Вы можете оформить заказ связавшись менеджерами металлобазы «Аксвил».
+</p>
+								<p>Двутавровая балка (двутавр) № 10 применяется для придания надежности и жесткости металлическим и строительным конструкциям, используется в строительстве в качестве несущих элементов при возведении перекрытий и опор, для армирования стволов шахт, в машиностроительной и автомобильной промышленности, вагоностроении в качестве швеллера.</p>
+								<p>Стальная балка двутавровая высотой 100 мм производится в соответствии с требованиями ГОСТ 8239-89, ГОСТ 19425-74 и ГОСТ 26020-83.</p>
+							</div>
+							<div class="col-xl-3">
+								<img src="img/aside__img_1.jpg" alt="aside__img_1.jpg" class="img-fluid mb-5">
+								<img src="img/aside__img_2.jpg" alt="aside__img_2.jpg" class="img-fluid">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="card__line mt-3 mt-xl-4 mb-3 mb-xl-4"></div>
+			<div class="section__ttl">У нас покупают</div>
 		</div>
 	</div>
 	<footer class="footer">
