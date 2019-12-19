@@ -117,3 +117,13 @@ $(() => {
     }
   });
 });
+// about-nav
+$(() => {
+  $('.js-about__nav-btn').on('click', function aboutNavBtnClick() {
+    $(this)
+      .parent('.about__nav-item')
+      .toggleClass('active')
+      .find('.about__nav-dropdown')
+      .slideToggle()
+  })
+});
