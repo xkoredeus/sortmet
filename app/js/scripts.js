@@ -127,3 +127,13 @@ $(() => {
       .slideToggle()
   })
 });
+// acc
+$(() => {
+  $('.js-acc__btn').on('click', function aboutNavBtnClick() {
+    $(this)
+      .toggleClass('active')
+      .parent('.acc__item')
+      .find('.acc__cnt')
+      .slideToggle()
+  })
+});

@@ -81,10 +81,10 @@ textarea,
 select
   color: $dark
   font-family: $r-reg, sans-serif
-  font-size: 14px
-  padding: 12px 15px
+  font-size: 13px
+  padding: 8px 10px
   border-radius: 3px
-  border: none
+  background-color: #fff
   border: 1px solid #9E9E9E
   transition: all .4s ease
 // input,
@@ -315,6 +315,11 @@ a.wt
   &-plus
     right: 5px
     color: #3498DB
+.acc
+  &__btn
+    cursor: pointer
+  &__cnt
+    display: none
 .tabs
   // &__content-item
   //   // display: none
@@ -361,38 +366,31 @@ a.wt
     z-index: 1
     opacity: 0
     width: 100%
-    height: 20px
     cursor: pointer
   .checkbox__text
-    font-size: 14px
+    font-size: 11px
     position: relative
-    padding-left: 30px
+    padding-left: 20px
     cursor: pointer
     width: 100%
-    height: 30px
     display: block
-    +r(1200)
-      font-size: 12px
     &::before
       content: ''
       position: absolute
       top: 0px
-      left: -2px
-      width: 20px
-      height: 20px
-      border-radius: 2px
+      left: 0px
+      width: 15px
+      height: 15px
       border: 1px solid #c3c2c2
       background: #fff
     &::after
       content: ''
       position: absolute
-      top: 50%
-      margin-top: -11px
-      left: 2px
-      width: 12px
-      height: 12px
+      top: 4px
+      left: 4px
+      width: 7px
+      height: 7px
       background-color: $red
-      border-radius: 2px
       opacity: 0
       transform: scale(0)
       transition: 0.2s
@@ -864,7 +862,7 @@ a.wt
         color: #0063BE
         text-decoration: underline
 .content
-  padding: 30px 0
+  padding: 10px 0
   +rmin(1200)
     min-height: 45vh
   &__col
@@ -912,6 +910,28 @@ a.wt
         font-family: $r-bold
     .btn
       width: 100%
+  &__list
+    display: flex
+    flex-wrap: wrap
+    margin-left: -7px
+    margin-right: -7px
+    .ware__item
+      margin-bottom: 15px
+    &_viewed
+      .ware__item
+        margin-left: 5px
+        margin-right: 5px
+  &-seo
+    padding-left: 20px
+    padding-right: 20px
+    border: 1px solid #D7D8D9
+    border-radius: 4px
+    &__news
+      &-ttl
+        font-size: 18px
+        font-family: $r-bold
+        color: #4F5559
+
 .test
   &__item
     display: flex
@@ -1067,7 +1087,7 @@ a.wt
 .crumbs
   list-style: none
   margin: 0 0 20px 0
-  padding: 0
+  padding: 10px 0 0
   li
     display: inline-block
     &:not(:last-child)
@@ -1078,8 +1098,8 @@ a.wt
         width: 7px
         height: 7px
         top: 6px
-        right: -18px
-        border: 5px solid $tr
+        right: -16px
+        border: 4px solid $tr
         border-left-color: #9E9E9E
       margin-right: 15px
       &::after
@@ -1088,8 +1108,8 @@ a.wt
         width: 7px
         height: 7px
         top: 6px
-        right: -15px
-        border: 5px solid $tr
+        right: -14px
+        border: 4px solid $tr
         border-left-color: #fff
 
   a
@@ -1224,7 +1244,8 @@ a.wt
   &__nav
     &-item
       border-radius: 5px
-      padding: 5px 5px 5px 20px
+      padding: 9px 5px 8px 20px
+      background-color: #F4F4F4
       +ease
       &:not(:last-child)
         margin-bottom: 10px
@@ -1243,7 +1264,6 @@ a.wt
             border-top: solid 4px transparent
             +ease
         &.active
-          background-color: #F4F4F4
           .about__nav-btn
             &::before
               transform: rotate(90deg)
@@ -1321,4 +1341,289 @@ hr
   width: 100%
   display: block
   background-color: #000
+  border: none
   opacity: .2
+div
+  &.pagination
+    display: flex
+    justify-content: center
+    align-items: center
+    ul
+      &.pagination
+        list-style-type: none
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 0
+        padding: 0
+        li
+          display: flex
+          justify-content: center
+          align-items: center
+          +ease
+          &.page-item
+            width: 24px
+            height: 24px
+            border-radius: 50%
+            display: flex
+            justify-content: center
+            align-items: center
+          &.active
+            background-color: $red
+            a
+              color: #fff
+          a
+            font-family: $r-bold
+            color: $dark
+            border: none
+            display: flex
+            justify-content: center
+            align-items: center
+          &:hover
+            opacity: .7
+          &.control
+            opacity: 1
+            color: #fff
+            position: relative
+            background-color: #9E9E9E
+            border-radius: 50%
+            +ease
+            &:hover
+              background-color: $red
+            span
+              width: 24px
+              height: 24px
+              display: flex
+              justify-content: center
+              align-items: center
+              +ease
+              svg
+                max-width: 17px
+                max-height: 17px
+                height: auto
+                fill: none
+                stroke: #fff
+                +ease
+            &_prev
+              margin-right: 5px
+            &_next
+              margin-left: 5px
+            &:hover
+              background-color: $red
+              border-color: $red
+              svg
+                stroke: #fff
+.cat
+  &-nav
+    background-color: #F4F4F4
+    border: 1px solid #D1D2D3
+    border-radius: 9px
+    display: flex
+    align-items: center
+    &__link
+      font-size: 12px
+      font-family: $r-bold
+      text-align: center
+      white-space: nowrap
+      color: #3A3A3A
+      padding: 15px 22.5px
+      display: block
+      &:not(:last-child)
+        border-right: 1px dashed #D1D2D3
+  &-filter
+    border: 1px solid #D1D2D3
+    border-radius: 9px
+    hr
+      background-color: #D1D2D3
+      opacity: 1
+    &__item
+      padding: 12px 15px
+    &__ttl
+      margin-bottom: 7px
+    select
+      color: #666666
+    .checkbox
+      margin-bottom: 10px
+    &__submit
+      padding-left: 0
+      padding-right: 0
+
+    &_open
+      &__item
+        padding: 10px 0
+        display: flex
+        .checkbox
+          margin-right: 10px
+          margin-bottom: 9px
+          min-width: 45px
+          text-align: center
+          &__text
+            font-size: 13px
+            color: #666666
+            position: relative
+            cursor: pointer
+            width: 100%
+            height: auto
+            display: block
+            padding: 3px 15px
+            background: #F4F4F4
+            border: 1px solid #CCCCCC
+            border-radius: 50px
+            +ease
+            &:hover
+              color: $red
+            &::before
+              display: none
+            &::after
+              display: none
+        input[type="checkbox"]:checked + .checkbox__text,
+        input[type="radio"]:checked + .checkbox__text
+          color: $red
+          border-color: $red
+      &__ttl
+        width: 90px
+        min-width: 90px
+        margin-top: 3px
+      select
+        padding: 0 5px
+        border-radius: 0
+  &__view
+    &-btn
+      padding: 7px
+      border-radius: 3px
+      fill: #999999
+      +ease
+      &:hover
+        fill: #1A1A1A
+      &_active
+        fill: $red
+        background-color: #EEEEEE
+.part
+  &__item
+    width: 93px
+    height: 50px
+    +ct
+    margin-right: 15px
+    margin-bottom: 15px
+.blog
+  &__list
+    margin-left: -10px
+    margin-right: -10px
+  &__item
+    width: 234px
+    margin-left: 10px
+    margin-right: 10px
+    margin-bottom: 20px
+    overflow: hidden
+    &-img
+      width: 100%
+      height: 111px
+      border-radius: 3px 3px 0 0
+      +cv
+    &-ttl
+      font-family: $r-bold
+      line-height: 1.4
+      text-decoration: underline
+      min-height: 54px
+      display: block
+      margin-bottom: 18px
+    &-info
+      padding: 15px
+      background-color: #f4f4f4
+      border: 1px solid #CCCCCC
+      border-radius: 0 0 3px 3px
+  &-page
+    line-height: 1.1
+    &::after
+      content: ''
+      display: table
+      clear: both
+    &__img
+      width: 319px
+      height: 256px
+      border-radius: 3px
+      margin-right: 20px
+      margin-bottom: 20px
+      +cv
+      float: left
+    &__descr
+      color: #574F4A
+.news
+  &__item
+    display: flex
+    &:not(:last-child)
+      margin-bottom: 20px
+    &-img
+      width: 148px
+      min-width: 148px
+      height: 100px
+      border-radius: 3px
+      margin-right: 20px
+      +cv
+    &-info
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+    &-date
+      color: #9E9E9E
+      margin-bottom: 5px
+    &-link
+      display: block
+      margin-bottom: 5px
+    &-descr
+      color: #574f4a
+      line-height: 1.1
+  &__list
+    &-more
+      min-width: 120px
+  &-page
+    line-height: 1.1
+    &::after
+      content: ''
+      display: table
+      clear: both
+    &__img
+      width: 256px
+      height: 174px
+      border-radius: 3px
+      margin-right: 20px
+      margin-bottom: 20px
+      +cv
+      float: left
+    &__date
+      color: #9E9E9E
+      margin-bottom: 8px
+    &__descr
+      color: #574F4A
+    &__more
+      &-item
+        &:not(:last-child)
+          margin-bottom: 4px
+      &-date
+        color: #9E9E9E
+        margin-right: 15px
+      &-link
+        &:hover
+          text-decoration: underline
+.faq
+  &__item
+    &:not(:last-child)
+      margin-bottom: 10px
+    &-btn
+      font-size: 15px
+      color: #000
+      background-color: #F4F4F4
+      padding: 10px 20px
+      border-radius: 3px
+      +ease
+      &.active
+        color: #fff
+        background-color: $red
+    &-cnt
+      color: #574F4A
+      line-height: 1.1
+      background-color: #F4F4F4
+      border: 1px solid #C4C4C4
+      border-radius: 3px
+      padding: 22px 15px
+      margin-top: 5px
