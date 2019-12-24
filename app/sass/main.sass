@@ -189,6 +189,8 @@ input[type="number"]
   height: auto
 .red
   color: $red
+.dgr
+  color: #999
 .wt
   color: #fff
 a.wt
@@ -751,7 +753,7 @@ a.wt
       color: #fff
       background: linear-gradient(180deg, #939393 0%, #686868 100%)
       border-radius: 5px 5px 0 0
-      padding: 12px 15px 12px 20px
+      padding: 8px 15px 8px 20px
       cursor: pointer
       span
         margin-left: 12px
@@ -764,22 +766,13 @@ a.wt
       border-bottom-left-radius: 5px
       border-bottom-right-radius: 5px
       padding: 2px
-      z-index: 2
+      z-index: 4
     &__link
-      position: relative
+      //position: relative
       padding: 12px 15px 12px 18px
-      font-family: $r-bold
       color: $ldark
-      &-icon
-        width: 20px
-        text-align: center
-      span
-        margin-left: 10px
+      cursor: pointer
       &-arr
-        position: absolute
-        right: 12px
-        top: 50%
-        transform: translateY(-50%)
         svg
           fill: none
           stroke: #818181
@@ -789,6 +782,46 @@ a.wt
       &:hover
         svg
           stroke: $red
+      &-btn
+        font-family: $r-bold
+        span
+          margin-left: 10px
+      &-icon
+        width: 20px
+        text-align: center
+      &-cnt
+        width: 100%
+        height: 100%
+        padding: 10px 15px
+        &-wrp
+          background-color: #fff
+          box-shadow: 0 0 5px #706e6e
+          border-radius: 0 8px 8px 0
+          width: 754px
+          height: 100%
+          position: absolute
+          top: 0
+          left: 216px
+      &-item
+        margin-bottom: 4px
+        &-btn
+          position: relative
+          border: 1px solid #DDDDDD
+          width: 11px
+          height: 11px
+          left: 0
+          top: 2px
+          display: inline-block
+          &::before
+            position: absolute
+            content: '+'
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+          &-wrp
+            position: relative
+
+
     &_hidden
       .main-nav
         &__btn
@@ -1447,7 +1480,66 @@ div
     &__submit
       padding-left: 0
       padding-right: 0
-
+    &__input
+      color: #000
+      border: 1px solid #AFAFAF
+      border-radius: 0
+      max-width: 60px
+      padding: 6px
+      &::placeholder
+        color: #000
+    &__slider
+      background-color: #fff
+      background-color: #f8a6a6
+      height: 9px
+      &-wrp
+        position: relative
+        margin-top: 10px
+        margin-bottom: 10px
+        .ui-slider-range
+          background-color: #D60000
+          opacity: .7
+          z-index: 3
+        .ui-slider-handle
+          position: absolute
+          display: -webkit-box
+          display: flex
+          -webkit-box-orient: vertical
+          -webkit-box-direction: normal
+          flex-direction: column
+          border: none
+          margin: 16px 0 0 -4px
+          width: 8px
+          height: 12px
+          cursor: pointer
+          outline: none
+          &::before
+            content: ''
+            border-left: 4px solid #0000
+            border-right: 4px solid #0000
+            border-bottom: 4px solid #aaa
+            width: 0
+            height: 0
+          &::after
+            content: ''
+            width: 8px
+            height: 8px
+            background-color: #aaa
+      &-delim
+        position: relative
+        width: 1px
+        height: 13px
+        background-color: #333
+        margin-bottom: -9px
+        z-index: 2
+      &-num
+        font-size: 10px
+        color: #333
+        width: 40px
+        &:nth-child(2)
+          text-align: center
+        &:nth-child(3)
+          text-align: right
     &_open
       &__item
         padding: 10px 0

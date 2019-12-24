@@ -132,8 +132,68 @@ $(() => {
   $('.js-acc__btn').on('click', function aboutNavBtnClick() {
     $(this)
       .toggleClass('active')
-      .parent('.acc__item')
+      .parents('.acc__item')
       .find('.acc__cnt')
       .slideToggle()
+  })
+});
+// cat filter slider
+$(() => {
+  const catFilterSliderMin = 0;
+  const catFilterSliderMax = 6200;
+  const catFilterSliderMid = catFilterSliderMax / 2;
+  const catFilterSliderValue1 = $("input.cat-filter__input_min").val();
+  const catFilterSliderValue2 = $("input.cat-filter__input_max").val();
+
+  $('.cat-filter__slider-num_min').text(catFilterSliderMin);
+  $('.cat-filter__slider-num_mid').text(catFilterSliderMid);
+  $('.cat-filter__slider-num_max').text(catFilterSliderMax);
+
+  $("input.cat-filter__input_min").val(catFilterSliderMin);
+  $("input.cat-filter__input_max").val(catFilterSliderMax);
+
+  $(".cat-filter__slider").slider({
+    min: catFilterSliderMin,
+    max: catFilterSliderMax,
+    values: [catFilterSliderMin,catFilterSliderMax],
+    range: true,
+    stop: function(event, ui) {
+      $("input.cat-filter__input_min").val($(".cat-filter__slider").slider("values",0));
+      $("input.cat-filter__input_max").val($(".cat-filter__slider").slider("values",1));
+    },
+    slide: function(event, ui){
+      $("input.cat-filter__input_min").val($(".cat-filter__slider").slider("values",0));
+      $("input.cat-filter__input_max").val($(".cat-filter__slider").slider("values",1));
+    }
+  });
+  $("input.cat-filter__input_min").on('input', function(){
+    if(parseInt(catFilterSliderValue1) > parseInt(catFilterSliderValue2)){
+      catFilterSliderValue1 = catFilterSliderValue2;
+      $("input.cat-filter__input_min").val(catFilterSliderValue1);
+    }
+    $(".cat-filter__slider").slider("values",0,catFilterSliderValue1);
+  });
+  $("input.cat-filter__input_max").on( 'input', function() {
+    if (catFilterSliderValue2 > catFilterSliderMax) { catFilterSliderValue2 = catFilterSliderMax; $("input.cat-filter__input_max").val(catFilterSliderMax)}
+    if(parseInt(catFilterSliderValue1) > parseInt(catFilterSliderValue2)){
+      catFilterSliderValue2 = catFilterSliderValue1;
+      $("input.cat-filter__input_max").val(catFilterSliderValue2);
+    }
+    $(".cat-filter__slider").slider("values",1,catFilterSliderValue2);
+  });
+});
+// cat filter checkbox
+$(() => {
+  const catFilterCheckbox = $('.cat-filter__dia > .checkbox');
+  if (catFilterCheckbox.length > 12) {
+    catFilterCheckbox
+      .slice(12)
+      .hide()
+      .parents('.cat-filter__dia')
+      .append($('<button type="button" class="mt-1 js-cat-filter__dia-btn"><div class="d-flex align-items-center "><img alt="link__arr.svg" src="img/link__arr.svg" class="mt-1"><span class="link_dec ml-2">Показать все</span></div></button>'));
+  }
+  $('.js-cat-filter__dia-btn').on('click', function catFilterDiaBtnClick() {
+    $(this).hide();
+    catFilterCheckbox.show();
   })
 });
