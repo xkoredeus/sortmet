@@ -107,80 +107,6 @@ input::-webkit-inner-spin-button
 input[type="number"]
   -moz-appearance: textfield
   appearance: textfield
-//.select__wrp
-//  border: 1px solid #BDBDBD
-//  border-radius: 3px
-//  position: relative
-//  display: flex
-//  background-color: #fff
-//  &::before
-//    content: ''
-//    position: absolute
-//    width: 12px
-//    height: 7px
-//    background: url('../img/icon__arr_bot-blck.svg') no-repeat 50% 50% / contain
-//    top: 50%
-//    transform: translateY(-50%)
-//    right: 9px
-//    +ease
-//  select
-//    width: 100%
-//    background-color: $tr
-//    border: none
-//    padding: 12px 25px 12px 15px
-//    position: relative
-//    appearance: none
-//    option
-//      width: 100%
-//  &:hover
-//    &::before
-//      top: 54%
-//      transform: translateY(-50%)
-.input__wrp
-  position: relative
-  // max-width: 230px
-  input,
-  select,
-  textarea
-    width: 100%
-    padding-left: 40px
-    background-color: $tr
-    // &:focus + .input__wrp-placeholder
-    //  top: -5px
-    //  left: 30px
-    //  transform: translateY(0) scale(.7)
-    //  opacity: .7
-  &::before
-    content: ''
-    position: absolute
-    left: 15px
-    top: 50%
-    transform: translateY(-50%)
-    width: 12px
-    height: 17px
-    background-position: 50% 50%
-    background-size: contain
-    background-repeat: no-repeat
-  // &-placeholder
-  //  position: absolute
-  //  left: 40px
-  //  top: 50%
-  //  transform: translateY(-50%)
-  //  transition: .4s all ease
-  //&_name
-  //  &::before
-  //    background-image: url('../img/icon__form-name.svg')
-  //&_mail
-  //  &::before
-  //    background-image: url('../img/icon__form-mail.svg')
-  //&_tel
-  //  &::before
-  //    background-image: url('../img/icon__form-tel.svg')
-  //&_text
-  //  &::before
-  //    top: 14px
-  //    transform: translateY(0)
-  //    background-image: url('../img/icon__form-mes.svg')
 +rmin(1200)
   .container
     width: calc(994px + 30px)
@@ -199,6 +125,8 @@ a.wt
   color: #fff !important
   &:hover
     color: $lred !important
+.mgr
+  color: #574F4A
 .lgr
   color: #9E9E9E
 .bold
@@ -1771,3 +1699,48 @@ div
       border-radius: 3px
       padding: 22px 15px
       margin-top: 5px
+.bend
+  &__table
+    width: 100%
+    margin-bottom: 17px
+    &-ttl
+      font-family: $r-bold
+      font-size: 18px
+      color: #fff
+      padding: 8px 20px
+      background-color: $red
+    tr
+      border-bottom: 1px solid #ccc
+    th
+      font-family: $r-bold
+    th,
+    td
+      padding: 10px
+      text-align: center
+  &__test
+    &-item
+      background-color: #F4F4F4
+      border-radius: 5px
+      padding: 20px
+      display: flex
+      align-items: flex-start
+      &:not(:last-child)
+        margin-bottom: 20px
+    &-icon
+      width: 43px
+      min-width: 43px
+      height: 43px
+      border-radius: 50%
+      background-color: $red
+      margin-right: 23px
+      display: flex
+      justify-content: center
+      align-items: center
+    &-ttl
+      font-family: $r-bold
+      font-size: 18px
+      margin-bottom: 10px
+.warning-text
+  padding: 14px 18px
+  border: 1px solid $red
+  border-radius: 3px
