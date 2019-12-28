@@ -944,7 +944,16 @@ a.wt
         font-size: 18px
         font-family: $r-bold
         color: #4F5559
-
+  &__banner
+    width: 100%
+    height: 274px
+    +cv
+    margin-bottom: 17px
+  &__descr
+    &-img
+      width: 100%
+      height: 194px
+      +cv
 .test
   &__item
     display: flex
@@ -1744,3 +1753,54 @@ div
   padding: 14px 18px
   border: 1px solid $red
   border-radius: 3px
+  &__cut
+    width: 100%
+    height: 100%
+    min-height: 145px
+    border-radius: 5px
+    +cv
+.gost
+  &__item
+    &:not(:last-child)
+      margin-bottom: 10px
+  &__btn
+    font-size: 15px
+    color: #000
+    background-color: #F4F4F4
+    padding: 10px 20px
+    border-radius: 3px
+    +ease
+    &.active
+      color: #fff
+      background-color: $red
+  &__cnt
+    color: #574F4A
+    line-height: 1.1
+    background-color: #F4F4F4
+    border: 1px solid #C4C4C4
+    border-radius: 3px
+    padding: 22px 15px
+    margin-top: 5px
+    &-item
+      display: flex
+      align-items: center
+      &:not(:last-child)
+        margin-bottom: 10px
+      &:hover
+        .gost__cnt
+          &-icon
+            background-color: #574F4A
+          &-text
+            color: $red
+            text-decoration: none
+    &-icon
+      color: #fff
+      background-color: $red
+      border-radius: 3px
+      padding: 6px
+      margin-right: 12px
+      +ease
+    &-text
+      color: #574F4A
+      text-decoration: underline
+      +ease

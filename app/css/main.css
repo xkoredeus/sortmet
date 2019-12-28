@@ -1564,6 +1564,23 @@ a.wt:hover {
   color: #4F5559;
 }
 
+.ware__banner {
+  width: 100%;
+  height: 274px;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 17px;
+}
+
+.ware__descr-img {
+  width: 100%;
+  height: 194px;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .test__item {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2956,4 +2973,87 @@ div.pagination ul.pagination li.control:hover svg {
   padding: 14px 18px;
   border: 1px solid #D60000;
   border-radius: 3px;
+}
+
+.warning-text__cut {
+  width: 100%;
+  height: 100%;
+  min-height: 145px;
+  border-radius: 5px;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.gost__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.gost__btn {
+  font-size: 15px;
+  color: #000;
+  background-color: #F4F4F4;
+  padding: 10px 20px;
+  border-radius: 3px;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+
+.gost__btn.active {
+  color: #fff;
+  background-color: #D60000;
+}
+
+.gost__cnt {
+  color: #574F4A;
+  line-height: 1.1;
+  background-color: #F4F4F4;
+  border: 1px solid #C4C4C4;
+  border-radius: 3px;
+  padding: 22px 15px;
+  margin-top: 5px;
+}
+
+.gost__cnt-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gost__cnt-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.gost__cnt-item:hover .gost__cnt-icon {
+  background-color: #574F4A;
+}
+
+.gost__cnt-item:hover .gost__cnt-text {
+  color: #D60000;
+  text-decoration: none;
+}
+
+.gost__cnt-icon {
+  color: #fff;
+  background-color: #D60000;
+  border-radius: 3px;
+  padding: 6px;
+  margin-right: 12px;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+
+.gost__cnt-text {
+  color: #574F4A;
+  text-decoration: underline;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
 }
