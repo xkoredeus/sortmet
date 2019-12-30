@@ -197,3 +197,11 @@ $(() => {
     catFilterCheckbox.show();
   })
 });
+// input type file
+$('.upload__file').change(function() {
+  var filename = [];
+  for (var i = 0; i < $(this).get(0).files.length; ++i) {
+    filename.push($(this).get(0).files[i].name.slice(0, 18) + '...');
+  }
+  $(this).next('.filename').text(filename.join(', '));
+});

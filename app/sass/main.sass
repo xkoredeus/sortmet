@@ -212,6 +212,41 @@ a.wt
     &:hover
       color: #737171
       background: #E4E2E2
+  &--gr
+    color: #3A3A3A
+    background: linear-gradient(180deg, #F1F1F1 0%, #C9C9C9 100%)
+  &--file
+    position: relative
+    cursor: pointer
+    width: 100%
+    height: 100%
+    .upload__file
+      width: 0.1px
+      height: 0.1px
+      opacity: 0
+      overflow: hidden
+      position: absolute
+      z-index: -1
+    label.filename
+      cursor: pointer
+      margin-bottom: 0
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      z-index: 1
+    img
+      height: 100%
+      position: absolute
+      right: 0
+      top: 0
+    &:hover
+      img
+        transform: scale(1.05)
 .quantity
   position: relative
   min-width: 100px
@@ -1804,3 +1839,88 @@ div
       color: #574F4A
       text-decoration: underline
       +ease
+.vacancy
+  &__item
+    background-color: #F4F4F4
+    border-radius: 5px
+    padding: 29px 20px
+    &:not(:last-child)
+      margin-bottom: 20px
+    &-list
+      margin: 0
+      padding: 0 0 0 63px
+      list-style-type: none
+      li
+        color: #574F4A
+        position: relative
+        &:not(:last-child)
+          margin-bottom: 10px
+        &::after
+          position: absolute
+          content: ''
+          width: 6px
+          height: 6px
+          left: -26px
+          top: 6px
+          background-color: $red
+          border-radius: 50%
+  &__top
+    display: flex
+    align-items: center
+    margin-bottom: 10px
+  &__icon
+    min-width: 43px
+    height: 43px
+    margin-right: 21px
+    background-color: $red
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+  &__form
+    input
+      color: #666666
+      border-color: #9E9E9E
+      &::placeholder
+        color: #666666
+.contacts
+  &__supply
+    position: relative
+    margin-bottom: -40px
+    z-index: 2
+    max-width: 240px
+    margin-left: auto
+  &__table
+    tr
+      border-top: 1px solid #ccc
+      &:last-child
+        border-bottom: 1px solid #ccc
+    td
+      color: #574F4A
+      padding: 8px 5px 8px 0
+  &__tabs
+    .tabs
+      &__list
+        display: flex
+        transform: translateY(1px)
+        position: relative
+        z-index: 1
+        &>div
+          padding: 10px 15px
+          background-color: #F4F4F4
+          border: 1px solid #CBCCCE
+          border-top-left-radius: 3px
+          border-top-right-radius: 3px
+          text-decoration: underline
+          text-decoration-style: dotted
+          cursor: pointer
+          +ease
+          &.active
+            color: $red
+            background-color: #fff
+            border-bottom: #fff
+            text-decoration: none
+      &__container
+        border-radius: 0 4px 4px 4px
+        border: 1px solid #D2D3D4
+        padding: 20px 15px
