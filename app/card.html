@@ -20,7 +20,7 @@
 						<a class="header__top-link" href="#">Доставка и оплата</a>
 					</div>
 					<div class="d-flex align-items-center">
-						<a class="header__top-link header__top-link--price" href="#">Прайс лист</a>
+						<a class="header__top-link header__top-link--price" href="#popup_price" data-fancybox>Прайс лист</a>
 						<a class="header__top-link" href="#">Контакты</a>
 					</div>
 				</div>
@@ -5607,6 +5607,25 @@
 		</div>
 	</div>
 	<!--/click popup-->
+	<!--price popup-->
+	<div id="popup_price" class="popup__container" style="display:none">
+		<div class="popup__wrp popup_call__wrp">
+			<form action="[[~[[*id]]]]" method="post" class="popup">
+				<div class="section__ttl mb-2">Запрос прайс-листа</div>
+				<div class="tac mb-2">Укажите ваш e-mail и вам автоматически в течение <br> 1 мин придет письмо с последним <br> прайс-листом компании</div>
+				<div class="d-flex flex-column tal mb-3 popup_call__col">
+					<input type="email" name="popup_price__email" required="" placeholder="*Ваша почта" class="w-100">
+				</div>
+				<label class="checkbox mb-3">
+					<input type="checkbox" required="" checked>
+					<span class="checkbox__text">Нажмимая на кнопку, Вы соглашаетесь с <a href="#">правилами обработки персональных данных </a></span>
+				</label>
+				<input type="submit" class="btn mb-3" name="popup_call__sumbit" value="Получить прайс-лист">
+				<div class="text-center">*-поля обязательные для заполнения</div>
+			</form>
+		</div>
+	</div>
+	<!--/price popup-->
 	<script src="js/libs.min.js"></script>
 	<script src="js/scripts.js"></script>
 </body>
